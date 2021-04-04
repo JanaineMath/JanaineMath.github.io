@@ -1,5 +1,5 @@
 ---
-title: "Querida Matemática"
+title: "Nossa Matemática"
 output: html_document
 ---
 ```{r setup, include=FALSE}
