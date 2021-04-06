@@ -1,0 +1,139 @@
+---
+title: "Classificação de Grupos Simples"
+author: "Janaíne Martins"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Introdução
+O estudo de grupos simples iniciou-se no século XIX com Évariste Galois, que também originou historicamente o conceito de grupo. Seus estudos tiveram início ainda na adolescência quando passou a arquitetar uma teoria com aplicações sobretudo à teoria das equações algébricas que o levou a concluir um importante resultado: a impossibilidade de resolução por meio
+de radicais de equações gerais de grau maior ou igual a cinco.
+
+A teoria de grupos é o ramo que estuda estruturas algébricas
+chamadas de ``grupos" que estão presentes em todas as partes da matemática, sobretudo, em álgebra.
+A importância dos estudos de grupos simples em teoria dos grupos se dá no sentido que todo grupo pode ser visto com blocos de subgrupos simples. 
+
+ Esta iniciação científica visa classificar e estudar grupos simples. Definimos um grupo sendo simples se ele é não trivial e possui somente subgrupos normais triviais. Seja $G$ um grupo e $H$ um subgrupo de $G$. $H$ é dito normal  se $H = aHa^{-1}$ para todo $a\in G$.
+ 
+ Durante esta iniciação científica estudaremos propriedade e teoremas de grupos finitos, que serão utilizados para a classificação, dentre esses o Teorema de Sylow e o Teorema de Jordan, conhecido como Teorema de Classificação, que será de grande importância para o estudo, visto que tal teorema tem por objetivo classificar todos os grupos simples finitos conforme
+ quatro categorias(ordem prima, $A_n, n \geq$ 5, grupos de Lie e os grupos esporádicos) que estudaremos ao decorrer da iniciação. 
+ 
+ A importância dos estudos de grupos se dá pelo fato de sua utilidade em muitas áreas da matemática e suas aplicações é devido à sua universalidade, visto que muitas das áreas matemáticas utilizam situações geométricas como: movimentos de espaço, simetrias, espaços vetoriais, regras aritméticas, entre outras.A importância dos estudos de grupos se dá principalmente em álgebra, sendo indispensável para os estudos sobre anéis, corpos, módulos e espaços vetoriais. Os grupos simples são de grande importância para a teoria de grupos, uma vez que grupos finitos são construídos a partir dos grupos simples finitos e todo grupo pode ser decomposto em uma série de fatores simples.
+ 
+### Definições
+
+- Um conjunto $G$ não vazio munido de uma operação (.) é dito **grupo** se a $.$ satisfaz as seguintes condições:
+
+  - A operação é associativa;
+  - Possui elemento neutro;
+  - Todo elemento é inversível.
+
+
+- Se a operação $*$ for comutativa, dizemos que $G$ é grupo abeliano. 
+
+- Um subconjunto não vazio $H$ de um grupo $G$  é dito **subgrupo** de $G$ (denotaremos como $H \leq G$) se $H$ é grupo com a operação de $G$.
+- Se o grupo $G$ é tal que existe $a\in G$ e $G=\langle a\rangle$, dizemos que $G$ é **grupo cíclico** gerado por $a$.
+- Seja $G$ um grupo. Um subgrupo $H$ de $G$ é dito **normal** se $aH = Ha  ~\forall~a\in G$, denotaremos por $H\lhd G$.
+- Um grupo $G$ é dito \textbf{simples} se não possui subgrupo normal não trivial.
+
+#### Exemplos
+- $(\mathbb{Z},+)$ é subgrupo de $(\mathbb{Q},+)$.
+- Seja $G$ um grupo e $a\in G$. O conjunto \[\langle a \rangle =\{a^n~|~n\in\mathbb{Z}\}\] é um subgrupo de $G$ chamado subgrupo gerado por $a$.
+- $\mathbb{Z}_n$ é grupo cíclico gerado por $\bar{1}$ para todo $n$.
+    
+    Lembre-se que $\mathbb{Z}_n\{\bar{0},\bar{1},\bar{2},\ldots,\overline{n-1}\}$ é o conjunto das classes dos restos módulo $n$ e um grupo aditivo.
+    
+-  O grupo $\mathbb{Z}_3$ é simples. Basta notar que os únicos subgrupos que $\mathbb{Z}_3$ possui são os triviais.
+
+
+ 
+### Teoremas
+Os resultados a seguir serão de grande importância para a classificação dos grupos, são eles:
+
+**Teorema de Lagrange:**
+Sejam $G$ um grupo e $H$ um subgrupo de $G$. Então $|H|$ divide $|G|$.
+
+**Teorema de Cauchy:** 
+Sejam $G$ um grupo finito e $p$ um primo tais que $p$ divide $| G |$ .Então, existe um elemento $g\in G$ com $o(g) = p$.
+
+**Teorema 3:**
+Seja $G$ um grupo tal que $| G |= p$ ,com $p$ primo. Então $G$ é cíclico e simples.
+
+**Teorema 4:**
+Sejam $G$ um grupo e $H$ um subgrupo de $G$ tal que $[G:H]=2$, então $H$ e normal em $G$.
+
+**Teorema 5:**
+Seja $G$ um grupo tal que $| G |= p^2$ , com $p$ primo. Então $G$ é abeliano.
+
+Se $|G|=p^mb$ com $\operatorname{mdc}(p,b)=1$, dizemos que um **$p$-subgrupo de Sylow** de $G$ é um subgrupo de ordem $p^m$. O conjunto de todos os $p$-subgrupos de Sylow é denotado por $Syl_p(G)$ e definimos $n_p=\# Syl_p(G)$.
+
+**Teorema de Sylow:**
+Sejam $G$ um grupo e $p$ um primo tais que $G=p^mb$ com $\operatorname{mdc}(p,b)=1$. Valem as seguintes afirmações:
+
+ - $Syl_p(G)\neq \emptyset$, isto é, o cojunto dos subgrupos de $G$ com ordem $p^m$ é não vazio.
+
+ - Para todos $H, K \in Syl_p (G)$ , existe $g \in G$ tal que $K = gHg^{−1}$ . Isto é, todos os subgrupos de $G$ com ordem $p^m$ são conjugados em $G$.
+
+ - Se $K$ é subgrupo de $G$ com $| K |= p^i~ (i \leq n)$, então existe $H\in Syl_p (G)$ tal que $K$ é subgrupo de $H$.
+ 
+ - Se $n_p =| Syl_p (G) |$ , então $n_p | b$ e $n_p \equiv 1 (\operatorname{mod} p)$.
+
+Um resultado interessante é que se $n_p=1$, o único $p$-subgrupo de Sylow de $G$ é normal.
+
+**Teorema 7:** 
+Suponha que $| G |= p^m$ , com $p$ primo e $m\geq 2$. Então $G$ não é simples.
+
+**Teorema 8:**
+Seja $G$ um grupo finito. Seja $K$ subgrupo de $G$ tal que $[G : K] = m$. Suponha que $| G |\nmid m!$ , então existe $H \neq\{ e \}$ (onde $e$ é a identidade do grupo) tal que $H$ é subgrupo de $K$ e $H$ é normal em $G$.
+
+**Teorema 9:**
+Seja $G$ um grupo. Suponha que $| G |= 2n$ , onde $n$ é ímpar, $n\geq 3$. Então $G$ não é simples.
+ 
+**Teorema 10:**
+Seja $G$ um grupo tal que $|G|=pq$, com $p$ e $q$ primos distintos. Então $G$ não é simples.
+    
+**Teorema 11:**
+Seja $G$ um grupo tal que $| G |=pqr$ , com $p,q$ e $r$ primos distintos entre si. Então $G$ não é simples.
+
+**Definição:** Seja $G$ um grupo, dizemos que $G$ é um $p$-grupo se $| G |= p^m$ , com $p$ um primo.
+
+**Proposição:**
+
+Seja $G$ um grupo tal que $| G |=p^n q^m$ , com $p$ e $q$ primos e $q > p^n$. Então $G$ não é simples.
+
+
+**Demonstração:** Pelo Teorema de Sylow, temos que
+$n_q | p^n$ e $n_q \equiv 1 (\operatorname{mod} q)$. Como $q > p^n$ e $n_q | p^n$, vale que $n_q < q$.
+Como $n_q \equiv 1 (\operatorname{mod}~q)$, vemos que $n_q = 1$ . Do item 2 do teorema de Sylow, segue que $H\in Syl_p (G)$ é normal. Logo, $G$ não é simples.
+
+### A_5
+       Tendo em vista que $A_5$ é subgrupo de $S_5$ e $S_5 $ é o grupo das permutações de $5$ símbolos de ordem 5! = 120, vejamos alguns conceitos:
+       
+- Uma permutação par é uma bijeção que permuta uma quantidade ímpar de símbolos.
+       
+Ex: se $A=\{1,2,3,4,5\},~ \alpha\in S_5$ tal que
+       
+\alpha: A&\rightarrow A\nonumber
+1&\mapsto 1\nonumber
+2&\mapsto 3\nonumber
+3&\mapsto 4\nonumbe
+4&\mapsto 2\nonumber
+5&\mapsto 5\nonumber
+      
+        
+A permutação $\alpha$ é par.
+        
+- $A_5$ é o conjunto das permutações pares de $S_5$.
+        
+- A ordem de $A_5$. é:\[|A_5|=\displaystyle\frac{|G|}{2}=60.\]
+     
+      
+#### Grupo de Ordem 60
+  
+**Teorema:**
+    Seja $G$ um grupo simples de ordem $60$. Então $G$ é isomorfo ao grupo $A_5$.
+   
+Portanto, existe grupo simples de ordem 60.
