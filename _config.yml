@@ -1,12 +1,12 @@
 # Site settings
-title: Análises Matemáticas
+title: Querida Matemática
 description: Análises Matemáticas
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
-username: Análises Matemáticas
-user_description: Análises Matemáticas
+username: Querida Matemática
+user_description: Querida Matemática
 email: janaine.martins@ufv.br
 twitter_username: janaineMartinss
 github_username:  JanaineMath
