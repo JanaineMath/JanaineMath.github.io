@@ -9,6 +9,24 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Quem sou eu?
 
-por que eu escolhi matemátia?
+Eu sou Janaíne Martins, criadora desse site.
+Minha história se dá origem no dia 22/04/2001 pelos meus pais: Édio Donizete Martins e Maria de Lourdes Mesquita Martins, em Moema-MG. Há 19 anos cheguei ao mundo e à uma família que desde sempre são amantes à matemática, ou seja é um amor que está no sangue. 
+Desde muito nova me interesso pelos números e suas propriedade e minha mãe sempre me incentivando por também ter uma paixão por esse mundo das exatas. 
+
+A construção de quem sou e de quem estou me tornando, tanto como pessoa quanto matemática, devo muito aos meus pais, minha irmã Ediane, minha família materna e aos meus amigos, que sempre lutaram junto a mim e não mediram esforços para que me ajudassem a alcançar tudo que sonhei e ainda sonho, mesmo que algumas dessas pessoas não estejam presentes fisícamenete. 
+
+## Por que Matemática?
+
+Como supracitado, tenho uma forte influência da minha família e meu amor pelo mundo numérico é desde muito nova. No entanto, só me dei conta que queria ser matemática no terceiro ano do ensino médio, pois percebi que seria infeliz longe dos números. Tive um grande apoio do meu padrinho Ademar, que também foi matemático e meu principal exemplo, do meu pai e minha família materna que não mediram esforços, distância e nem saudade. 
+
+Ao decidir cursar matemática tinha  o desejo de que as pessoas que eu alcance vissem a matemática com outros olhos e não com um olhar de medo e de dificuldade, que pudessem ver o quanto é bela e que ela está em tudo e que percebessem que frases muito usadas por estudantes como "nunca mais vou usar Baskará na minha vida" não faz sentido. 
+
+Paulo Freire diz que a educação é uma das potentes ferramentas para a mudança da sociedade, desse modo, a matemática está envolvida na melhoria da sociedade fazendo-me acreditar na ciência e na educação, almejando seguir tal profissão.
+
+Durante a graduação pude confirmar ainda mais que a minha vocação é essa, mesmo que alguns dias foram e são mais difíceis que outros. Mas pude perceber ainda mais a beleza  que ela possui, o quanto é útil ao mundo e como podemos modelar tudo ao olhar matemático. 
+
+Ademais, deixo aqui sobre pessoas tantas pessoas que a matemática me fez conhecer: meus professores e orientadores que são grandes exemplos para mim. Os amigos que fiz ao longo do curso e que deixaram de ser apenas colegas e se tornaram amigos e família, estando ao meu lado em tantos momentos, tanto ruins quanto bons. Luiz com seu jeito único e me conhecendo tão bem que se tornou minha família juntamente com Júlia, minha pessoa, irmã e minha eterna dupla. Luan, com jeito jeito extrovertido e todo sentimental que me faz tão bem. Lucas e Josiane que são incríveis, Lucas com seu jeito estourado, como o meu, e Josiane a calmaria. Maíra que foi minha primeira amiga universitária e eterna. Vitória e Paula que pude conhecer melhor e me aproximar durantes Álgebra I. 
+
+Enfim, a matemática é parte de mim e da minha vida, não me vejo distante dos números, sem eles eu seria uma pessoa incompleta e vazia. Desejo me formar na graduação e seguir carreira acadêmica e me contruir como pessoa e matemática e assim ajudar as pessoas como um dia fui ajudada.
