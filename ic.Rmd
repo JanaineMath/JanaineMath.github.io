@@ -1,0 +1,34 @@
+---
+title: "Projetos de Iniciação Científica"
+author: "Janaíne Martins"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Análise Descritiva e Comparativa na COVID-19
+##### Modelos Estatísticos na correção de subnotificações da COVID-19. 
+
+O projeto de Iniciação Científica é sob a orientação do Prof. Dr. Guaraci de Lima Requena e é em conjunto com o Prof. Dr. Fernando Bastos e Guilherme Fernandes.  Além disso, contamos com o apoio financeiro do CNPq (Conselho Nacional de Pesquisa e Desenvolvimento). 
+
+Neste trabalho temos como objetivos:
+
+- Iniciar na pesquisa científica em Matemática e Estatística, em tópicos não vistos no curso;
+- Compreender as características de alguns bancos de dados públicos sobre a COVID-19, sobre por exemplo a natureza das variáveis e levantar hipóteses de como as variáveis podem estar relacionadas;
+- Estudar as bases dos modelos lineares generalizados Binomial e Poisson, compreender sua utilização e aplicá-los no contexto da COVID-19, bem como interpretar os resultados;
+- Estudar sobre as aplicações no software estatístico R;
+- Discutir sobre como estes modelos podem auxiliar na correção de subnotificação de casos e óbitos, por meio do modelo hierárquico Poisson-Binomial.
+
+## Classificação de Grupos Simples
+
+O projeto de Iniciação Científica é sob a orientação da Profª. Dra Danielle Franco Nicolau. O estudo se compreende na Teoria de Grupos, mais esfecíficamente sobre Grupos Simples. 
+
+Neste trabalho temos como objetivos:
+
+- Estudar teoremas sobre a teoria de grupos;
+- Discutir a definição de grupos simples;
+- Estuda como funciona a classificação de grupos simples;
+- Aplicar os teoremas e resultados estudados para a classificação de grupos simples; 
+- Compreender a importância de grupos simples finitos na teoria de grupos.  
