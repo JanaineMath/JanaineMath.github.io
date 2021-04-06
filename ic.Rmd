@@ -9,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Análise Descritiva e Comparativa na COVID-19
-##### Modelos Estatísticos na correção de subnotificações da COVID-19. 
+##### **Modelos Estatísticos na correção de subnotificações da COVID-19**. 
 
 O projeto de Iniciação Científica é sob a orientação do Prof. Dr. Guaraci de Lima Requena e é em conjunto com o Prof. Dr. Fernando Bastos e Guilherme Fernandes.  Além disso, contamos com o apoio financeiro do CNPq (Conselho Nacional de Pesquisa e Desenvolvimento). 
 
