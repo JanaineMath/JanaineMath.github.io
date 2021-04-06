@@ -1,0 +1,14 @@
+---
+title: "Quem sou eu e por que matemática?"
+author: "Janaíne Martins"
+date: "06/04/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+por que eu escolhi matemátia?
