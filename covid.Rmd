@@ -1,0 +1,224 @@
+---
+title: "Análise Comparativa e Descritiva na COVID-19"
+author: "Janaíne Martins"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Modelos Estatísticos na correção da subnotificação da COVID-19
+
+O novo coronavírus trouxe um grande impacto mundial e logo havia um grande interesse em pesquisas a respeito. Algo indispensável para a compreensão de características da doença são os dados. Em posse deles, podemos utilizar Estatística para:
+  
+- Compreender como se dá a evolução de casos e óbitos e fazer previsões; 
+- Entender o espalhamento da doença;
+- Estudar a ocupação de leitos de UTI para auxiliar em tomadas de decisão;
+- Estudar os efeitos de intervenções como isolamento social, uso de máscara dentre outras medidas preventivas;
+- Compreender a evolução da vacinação no mundo;
+- Buscar a correção de atrasos e subnotificações de casos, óbitos, hospitalizações.
+   
+Dentre outras tantas áreas que podem ser exploradas, dada a complexidade e gravidade da doença e da grande quantidade de dados que são gerados diariamente.
+
+
+#### Distribuição de Bernoulli
+**Definição: Ensaio de Bernoulli**
+Um ensaio de Bernoulli é um experimento aleatório com apenas dois resultados possíveis: ``sucesso'' e  ``fracasso''.
+
+A partir de um ensaio de Bernoulli, definimos a variável aleatória
+\begin{eqnarray*}
+X =\left\{\begin{array}{lllllll}
+1, &\text{ se sucesso}\\
+0, &\text{ se fracasso}\\
+\end{array}\right. 
+\end{eqnarray*}
+para então definir a distribuição de probabilidades para $X$, a **distribuição de Bernoulli**, que dá origem a todas as outras distribuições discretas.
+
+
+**Definição: Distribuição de Bernoulli**
+Uma variável aleatória $X$, como definica anteriormente, segue uma \textbf{distribuição de Bernoulli} com parâmetro $0\leq p\leq 1$ se a sua função de probabilidade é dada por
+$$P(X = x) = p^{x} (1 - p) ^{1 - x},\;\;\;\;\; x = 0, 1,$$
+ou seja, $P(X = 1) = p$ e $P(X = 0) = 1-p$, e denotamos por $X\sim Bern(p)$.
+
+**Esperança e Variância:**
+
+
+São características importantes para descrevermos a distribuição. Se $X \sim Bern(p)$, então
+
+\begin{eqnarray*}
+E(X) &=& p \\
+Var(X) &=& p(1 - p)
+\end{eqnarray*}
+
+
+**Exemplos**
+- No estudo de subnotificação no caso da COVID-19, uma variável Bernoulli que surge é
+    \begin{eqnarray*}
+        X =\left\{\begin{array}{lllllll}
+        1, &\text{ se notificado}\\
+        0, &\text{ se não notificado}\\
+        \end{array}\right.
+    \end{eqnarray*}
+
+
+Alguns outros exemplos são:
+
+- Se foi ($X=1$) ou não ($X=0$): infectado, hospitalizado, a óbito, para a UTI, vacinado, dentre outros;
+- Se tem ($X=1$) ou não ($X=0$) febre, cansaço, falta de ar, ...; comorbidades; se teve ou não contato com alguém infectado.
+
+**Distribuição de Poisson**
+- Uma outra característica que surge imediatamente no caso da COVID-19 é os dados de {\it contagem}. Uma distribuição geralmente utilizada para descrever a aleatoriedade deste tipo de variável é a {\bf distribuição de Poisson}.
+
+
+**Definição: Distribuição de Poisson**
+Diz-se que uma variável aleatória Y tem distribuição de Poisson com parâmetro $\lambda$ se
+sua função de probabilidade é dada por:
+$$P(Y = y) = \dfrac{\lambda^{y}e^{-\lambda}}{y!},\;\;\;\;\;  y = 0, 1, 2, ...$$
+e denotamos por $Y\sim Poi(\lambda).$
+
+**Esperança e Variânça:**
+Se  $Y \sim Poi(\lambda)$, então $E (Y) = Var(Y) = \lambda$.
+
+**Exemplos**
+- No estudo de subnotificação no caso da COVID-19, podemos pensar que o número verdadeiro diário de casos ($Y = 0, 1, 2, ...$) por município no Brasil segue uma distribuição de Poisson e $\lambda$ representa a média de casos. 
+
+Alguns outros exemplos são:
+
+- Número diário de óbitos, hospitalizações, número de dias que fica hospitalizado, dentre outros.
+
+**Distribuição Binomial**
+
+- Por fim, apresentamos a {\bf distribuição Binomial} que descreve a aleatoriedade para variáveis aleatórias com a seguinte características: contar o número de sucessos em $y$ ensaios independentes de Bernoulli com parâmetro $p$. Assim, obteremos a distribuição Binomial com parâmetros $y$ e $p$.
+
+
+**Definição: Distribuição Binomial**
+
+Uma variável aleatória $Z$ segue distribuição Binomial com parâmetros $y$ e $p$ se sua função de probabilidade é dada por:
+
+\begin{eqnarray*}
+    P(Z = z) = {y \choose z} p^{z}(1 - p)^{y-z}, \;\;\;\;\; z = 0, 1, 2, ..., y.
+\end{eqnarray*}
+
+**Esperança e Variânça:** Se $Z \sim B(y, p)$, então:
+\begin{eqnarray*}
+E (Z) &=& yp\\
+Var(Z) &=& yp (1 - p)
+\end{eqnarray*}
+
+**Exemplos**
+
+- No estudo de subnotificação no caso da COVID-19, podemos pensar que há um número verdadeiro de casos em um determinado município, porém apenas alguns são notificados e registrados. Então de $y$ casos da COVID-19 em um dia, um número $Z=0, 1, 2, ..., y$ são notificados e a distribuição Binomial surge naturalmente neste contexto.
+
+Alguns outros exemplos são:
+
+- Número de sintomas (de uma lista com $y$ sintomas), número de comorbidades, dentre outros.
+
+#### Modelo Hierárquico de Poisson-Binomial
+
+- Como citado nos exemplos anteriores, podemos supor que há um número {\bf verdadeiro} de casos que ocorreram em um município, digamos $Y$, mas que apenas $Z$ casos são notificados às autoridades. Uma restrição que surge em $Z$ é $$Z=0, 1, ..., Y \;\;\;\text{ em que }\;\;\; Y=0, 1, 2, 3, ...$$
+
+- Dessa forma, consideramos que $Y\sim Poi(\lambda)$ e que representa o número verdadeiro de casos e supondo que a {\bf probabilidade de notificação} é $p$ em todos os casos, então o número de casos notificados, dado o número verdadeiro, é $Z|y \sim Bin(y, p)$, ou seja, obtemos o {\bf modelo hierárquico Poisson-Binomial}:
+
+\begin{eqnarray*}
+Y &\sim& Poisson(\lambda)\\
+Z|Y=y &\sim& Binomial(y, p)
+\end{eqnarray*}
+
+
+
+
+#### Como podemos aplicar o modelo hierárquico Poisson-binomial?
+
+- É discutido em Stoner et al. (2017) como podemos relacionar covariáveis com o número médio de casos (verdadeiros) $\lambda$ e com a probabilidade de notificação $p$. As ferramentas para relacionar covariáveis com $\lambda$ e $p$ são chamadas de **modelos de regressão.**
+   
+- A quantidade de testes disponíveis em um município é provavelmente uma variável importante para modelarmos a probabilidade de um caso ser notificado;
+- Medidas restritivas em um município podem ser variáveis importantes para explicar o número verdadeiro de casos.
+    
+
+#### Modelos Lineares Generalizados 
+
+- Como comentado, as ferramentas para relacionar um conjunto de características chamado de {\bf variáveis explicativas} (VE) com uma variável de interesse, chamada de {\bf variável resposta} (VR) são os {\bf modelos de regressão}. 
+   - Uma classe de modelos que englobam as distribuições Binomial e de Poisson são os {\bf Modelos Lineares Generalizados}. Foram propostos por Nelder e Wedderburn (1972).
+- Os MLGs são caracterizados por:
+ - componente aleatório
+ - componente sistemático
+ - função de ligação
+
+
+#### Componente Aleatório
+É o componente que especifica VR $Y$ e sua distribuição de probabilidades. Considera-se $Y_1, Y_2, Y_3...Y_n$ uma sequência de variáveis aleatórias independentes e seguindo uma distribuição de probabilidades. Por exemplo, podemos dizer que e que para $n$ municípios teremos $Y_1, Y_2, ..., Y_n\sim Poi(\lambda)$, independentes e identicamente distribuídas.
+
+
+**Componente Sistemático**
+É o componente que especifica as VEs. Tal componente entra como preditor linear na equação do modelo e é o que buscamos relacionar com a VR. Dadas $k$ VEs, digamos $x_1, x_2, ..., x_k$, o preditor linear é dado por
+\begin{eqnarray*}
+\beta_0 +  \beta_1 x_1 + \beta_2x_2+...+\beta_kx_k
+\end{eqnarray*}
+Por simplicidade na notação, vamos considerar como o preditor linear apenas $$\alpha + \beta x$$
+
+
+
+#### Função de Ligação
+A função de ligação, como o nome indica, faz a ligação entre os componentes aleatório e sistemático. Mais especificamente, é uma função $g(\cdot)$ que liga o valor esperado $E(Y)=\mu$ de $Y$ (que depende da sua distribuição) com o preditor linear $\alpha + \beta x$:
+\begin{eqnarray*}
+g(\mu) = \alpha + \beta x
+\end{eqnarray*}
+
+
+
+A função de ligação mais simples é a identidade g($\mu$) = $\mu$, utilizada no modelo linear (quando assumimos a distribuição Normal).
+    \begin{eqnarray*}
+    \mu = \alpha + \beta x
+    \end{eqnarray*}
+Outras funções de ligação permitem que $\mu$ seja relacionado de forma não linear aos preditores (como é os casos da Poisson e Binomial).
+
+
+### Modelo de regressão de Poisson
+
+**Componente aleatório:** supomos $Y\sim Poi(\lambda)$. Note que $\mu = E(Y) = \lambda$ ($\mu$ é uma notação genérica).
+
+**Componente sistemático:** consideramos como sendo o preditor linear $\alpha + \beta x$.
+
+**Função de ligação:** Como $\mu>0$, a função identidade não é adequada pois o preditor linear pode ser um número real, enquanto $\mu>0$. Assim, uma escolha é $g(\mu) = \log(\mu)\in \mathbb{R}$ e assim obteremos um modelo chamado de {\bf log-linear}: 
+\begin{eqnarray*}
+log (\mu) = \alpha + \beta x
+\end{eqnarray*}
+
+**Exemplo:** Dentro do contexto que estamos estudando, podemos considerar que $y$ é o número de casos em municípios e que $x$ é se havia ou não medidas restritivas. Com os dados em mãos, poderemos estimar e interpretar como $x$ se relacionar com $y$ através de sua média.
+
+
+### Modelo de regressão logística
+
+**Componente aleatório:** supomos que $Y\sim Bin(n, p)$. Em grande parte das aplicações, se considera na realidade que $Y\sim Bern(p)\equiv Bin(1, p)$. Note que $\mu = E(Y) = p,$ $0< p <1$ (ou $0<\mu<1$). 
+
+**Componente sistemático:** consideramos como sendo o preditor linear $\alpha + \beta x$.
+
+**Função de ligação:** Agora $0<\mu<1$ e nem a função identidade e nem a log são adequadas. Uma função que surge de forma natural é a função **logito**, dada por $g(\mu) = log \left(\dfrac{\mu}{1-\mu}\right)$. Assim:
+\begin{eqnarray*}
+g(\mu) = log \left(\dfrac{\mu}{1-\mu}\right) = \alpha + \beta x
+\end{eqnarray*}
+
+**Exemplo:** No contexto do estudo, podemos tomar como exemplo o caso em que $y$ é $1$ (notificado) e $0$ (não notificado) e $x$ o número de testes disponíveis. Com os dados em mãos, poderemos estimar e interpretar como $x$ se relaciona com a probabilidade de notificação.
+
+
+Algumas observações:
+
+
+- Cada distribuição de probabilidade para Y possui uma função especial da média que é chamado parâmetro natural ou função de ligação canônica.
+- Ela surge naturalmente ao se escrever a distribuição de probabilidades no formato da família exponencial (ver Nelder \& Wedderburn, 1972).
+- Para a distribuição normal é a identidade, para a binomial é o logito e para a Poisson é o log.
+- Dadas observações $(y_i, x_i), i=1, 2, ..., n$, podemos escrever a verossimilhança como função de $\alpha$ e $\beta$ e estimá-los por exemplo através da máxima verossimilhança. Geralmente métodos numéricos são empregados. Neste caso, $\beta$ será o {\bf efeito} que a variável $x$ tem na média.
+
+Para estimar os parâmetros e também para interpretá-los de forma adequada, podemos inverter as funções de ligação nos casos Binomial e Poisson:
+
+
+**Binomial**
+
+$$\log\left(\dfrac{\mu}{1-\mu}\right)=\alpha + \beta x \;\;\;\;\; \Leftrightarrow \;\;\;\;\; \mu = \dfrac {e^{\alpha + \beta x}} {1 + e^{\alpha + \beta x}}$$
+
+**Poisson**
+
+$$\log(\mu)=\alpha + \beta x \;\;\;\;\; \Leftrightarrow \;\;\;\;\; \mu = e^{\alpha + \beta x}$$
+
+
