@@ -109,19 +109,25 @@ Seja $G$ um grupo tal que $| G |=p^n q^m$ , com $p$ e $q$ primos e $q > p^n$. En
 $n_q | p^n$ e $n_q \equiv 1 (\operatorname{mod} q)$. Como $q > p^n$ e $n_q | p^n$, vale que $n_q < q$.
 Como $n_q \equiv 1 (\operatorname{mod}~q)$, vemos que $n_q = 1$ . Do item 2 do teorema de Sylow, segue que $H\in Syl_p (G)$ é normal. Logo, $G$ não é simples.
 
-### A_5
-       Tendo em vista que $A_5$ é subgrupo de $S_5$ e $S_5 $ é o grupo das permutações de $5$ símbolos de ordem 5! = 120, vejamos alguns conceitos:
+### $A_5$
+
+Tendo em vista que $A_5$ é subgrupo de $S_5$ e $S_5 $ é o grupo das permutações de $5$ símbolos de ordem 5! = 120, vejamos alguns conceitos:
        
 - Uma permutação par é uma bijeção que permuta uma quantidade ímpar de símbolos.
        
 Ex: se $A=\{1,2,3,4,5\},~ \alpha\in S_5$ tal que
        
-\alpha: A&\rightarrow A\nonumber
-1&\mapsto 1\nonumber
-2&\mapsto 3\nonumber
-3&\mapsto 4\nonumbe
-4&\mapsto 2\nonumber
-5&\mapsto 5\nonumber
+\alpha: A $\rightarrow$ A
+
+1 $\mapsto$ 1\nonumber
+
+2 $\mapsto$ 3\nonumber
+
+3 $\mapsto$ 4\nonumber
+
+4 $\mapsto$ 2\nonumber
+
+5 $\mapsto$ 5\nonumber
       
         
 A permutação $\alpha$ é par.
