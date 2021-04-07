@@ -1,0 +1,274 @@
+---
+title: "Conjectura de Collatz e os Primos Gêmos"
+author: "Janaíne Martins"
+output: html_document
+---
+
+## A perigosa conjectura de Collatz}
+
+ Os matemáticos, aconselham uns aos outros a ficarem bem longe dessa famosa conjectura, pois dizem que essa é uma verdadeira areia movediça mental para os amantes dos números. 
+
+O matemático Paul Erdős diz que ``A matemática não está pronta para este tipo de problema''. Por mais simples que seja, há enigmas em sua demonstração que deixam matemáticos intrigados e sem entender, o por quê um teorema tão simples de ser enunciado, não ser provado mesmo depois de um século.
+
+Embarquemos nessa conjectura que parece o enunciado de um truque de mentalismo. 
+
+**O que é a conjectura de Collatz?**
+
+A conjectura de Collatz assemelha-se a um chiclete mental aparentemente inocente e provavelmente inútil, podendo ser entendida até mesmo por uma criança. Porém, faz com que matemáticos literalmente passem muito tempo tentando resolver o problema $``3x + 1''$, como também é conhecido, sem sucesso.
+
+Esta conjectura se expressa da seguinte maneira: Se $n$ é um número *par*, divide por $2$ até chegar a um número **ímpar** ou *1*, se for um *ímpar* diferente de $1$, deve ser multiplicado por $3$ e adicionado a $1$, e inicia o processo de dividir por $2$, até chegar o resultado final que será sempre $1$. Esse processo mostra que sempre termina quando $(3n + 1) \div 2 = 2^{k}$, o $n = 2^{k}$ sendo $k \geq 1$, pois a divisão sucessiva de $k$ vezes por $2$ de $2^{k}$ é $1$.
+
+**A Conjectura de Collatz**
+
+ conjectura de Collatz, conhecida também
+como $3n + 1$ foi formulada em 1937 pelo matemático alemão Lothar Collatz. Um problema tão famoso no estudo da matemática, algo que se imagina ser verdadeiro, mas que nunca se chegou a uma demonstração satisfatória, tampouco a uma rejeição de tal argumento.
+
+Esta conjectura pode ser compreendida da seguinte forma: Se $n$ é um número par,devemos dividi-lo por $2$ até que chegue a um número ímpar ou $1$, se $n$ for um ímpar diferente de $1$, devemos multiplicá-lo por $3$ e adicionar $1$, e iniciam-se interações, até chegar ao resultado final que será sempre $1$.
+
+Esse processo mostra que sempre termina quando $\frac {3n + 1}{2} = 2k$, o $n = 2k$ sendo $k\leq 1$, pois a divisão sucessiva de $k$ vezes por $2$ de $2k$ é $1$. Formalmente, isto equivale a uma função $f : \mathbb{N} \rightarrow \mathbb{N}$, tal que:\\
+
+$f(n) = \left \{\begin{array}{l}
+\frac{n}{2}\textbf{, se $n$ é par};\\
+\\
+3n+1\textbf{, se $n$ é ímpar};\\
+
+\end{array} \right.$\\
+\\
+
+O interessante fato da análise de $f(n)$ é que ela sempre nos levará a $1$ para qualquer $n\in\mathbb{N}$, isto é, dentro análise dos números, teremos uma função que sempre nos levará à unidade.
+
+**Testes da Conjectura de Collatz**
+
+ Existem soluções diretas com os números pares $n = 2^{k}$ para $k\geq1$. Os sucessivos períodos de divisão $k$ vezes por $2$, tem um resultado final igual a $1$.
+
+ Os números ímpares $n = 2t+1$ para $t \geq 1$, teriam uma solução direta se $\frac{3n+1}{2}= 2k$, onde $t = \frac{2^{k}-2}{3}$ para $k\geq 3$ ímpar, considerando que sempre $2^{k}-2$ é divisível por $3$ quando $k\geq 3$ ímpar.
+ 
+**Teste:***
+
+
+**1)** Seja $n = 2t + 1 $ ímpar, $t \geq 1$;
+
+**2** De acordo com a conjectura de Collatz $\frac{3n+1}{2} = 2^{k}$ de modo que o resultado final da divisão sucessiva por $2$ de $2^{k}$ seja $1$;
+
+**3** $\frac{3n+1}{2} = 2 + 3t = 2^{k}$;
+
+**4** $t = \frac{2^{k}-2}{3}$;
+
+**5)** Como $(2^{k}-2)$ sempre é divisível por $3$ quando $k \geq 3$ ímpar, portanto $t$ seria um número inteiro da forma $t = \frac{2^{k}-2}{3}$ e $n = 1 + 2\cdot (\frac{2^{k}-2}{3})$, o que leva a uma solução direta de $\frac{3n + 1}{2} = 2^{k}\Rightarrow{k \geq 3} $ ímpar, que por sucessivas divisões $k$ vezes por $2$ de $2^{k}$ termina em $1$.
+
+**A Um Passo da Demonstração**
+
+Um exemplo citado com maior frequência quando se trata da Conjectura de Collatz é a comparação entre os números 8.192 e 27. Perceba que para o número $8192$ chegar ao final inescapável de $(4,2,1)$ são necessários apenas 13 passos. Todavia, o número $27$, relativamente menor que $8192$, é preciso de 111 passos para chegar, mas no caminho sobe até $9232$ antes de poder alcançar o $(4, 2, 1)$. Logo, a ausência de padrões dificulta a resolução dessa conjectura já classificada como
+impossível.
+
+Entretanto, Terence Tao não resiste inteiramente aos cantos das sereias de seu campo de atuação. Um leitor anônimo deixou um comentário no blog de Tao sugerindo que ele resolvesse a conjectura de Collatz para "quase todos" números, em vez de tentar resolvê-la completamente, instigando-o a aprofundar nesse desafio.
+
+Em meio às análises matemáticas da conjectura, Tao percebeu um semelhança com as EDP (Equações Diferenciais Parciais).  ``Com uma EDP, pode-se conectar alguns valores, obtendo outros valores e repete o processo, tudo para entender esse estado futuro do sistema. Para qualquer EDP, deseja-se descobrir se alguns valores iniciais acabam levando a valores infinitos como saída ou se uma equação sempre produz valores finitos, independentemente dos valores com os quais você começa.
+
+Estudando um pouco mais sobre, T.Tao percebeu que a Estatística é uma ferramenta eficaz para a solução. No contexto da conjectura de Collatz, imagine começar com uma grande amostra de números. Seu objetivo é estudar como esses números se comportam quando você aplica o processo Collatz. Se quase $100\%$ dos números da amostra terminarem exatamente em $1$ ou muito próximo a $1$, você poderá concluir que quase todos os números se comportarão da mesma maneira.
+
+Mas para que a conclusão seja válida, você precisará construir sua amostra com muito cuidado, não basta pegar uma porção de números aleatórios.
+
+Uma das principais contribuições de Tao, talvez a que mais se destaca, foi a descoberta de como escolher uma amostra de números que, em grande parte, mantém seus pesos originais durante todo o processo de Collatz.
+
+O resultado é que a amostra com a qual o Tao começa mantém seu caráter, à medida que o processo Collatz prossegue.
+
+Tao usou essa técnica de ponderação para provar que quase todos os valores iniciais de Collatz, $99\%$ ou mais, finalmente atingem um valor bastante próximo de $1$. Isso permitiu que ele tirasse conclusões ao longo das linhas de $99\%$ dos valores iniciais superiores a $1$ quadrilhão eventualmente atingindo um valor abaixo de $200$. No entanto, o matemático não chegou a provar a veracidade da conjectura para todos os números.
+
+
+Com toda certeza, até hoje Tao foi o matemático que mais contribuiu para a envolvente conjectura de Collatz."
+
+
+ 
+**Testes**
+
+- Se o número é par, divida por 2;
+   
+- Se é ímpar, multiplique por 3 e some 1;
+
+**Exemplos:**
+
+$1º)$ Seja o número $15$, então:
+
+   \begin{align*}
+        15 \cdot 3+1 &= 46\\
+        
+        46 \div 2 &= 23\\
+        
+        23 \cdot 3+1 &= 70\\
+        
+        70 \div 2 &= 35\\
+        35 \cdot 3+1 &= 106\\
+        106 \div 2 &= 53\\
+        53 \cdot 3+1 &= 160\\
+        160 \div 2 &= 80\\
+        80 \div 2 &= 40\\
+        40 \div 2 &= 20\\
+        20 \div 2 &= 10\\
+        10 \div 2 &= 5\\
+        5 \cdot 3+1 &= 16\\
+        16 \div 2 &= 8\\
+        8 \div 2 &= 4\\
+        4 \div 2 &= 2\\
+        2 \div 2 &= 1
+   \end{align*}
+   
+
+$2º)$ Seja o número $42$, então:
+
+  \begin{align*}
+        42 \div 2 &= 21\\
+        21 \cdot 3+1 &= 64\\
+        64 \div 2 &= 32\\
+        32 \div 2 &= 16\\
+        16 \div 2 &= 8\\
+        8 \div 2 &= 4\\
+        4 \div 2 &= 2\\
+        2 \div 2 &= 1
+    \end{align*}
+        
+## Primos Gêmeos 
+
+A conjectura sobre a infinidade de primos gêmeos representa um grande desafio para as mentes matemáticas, até mesmo aquelas consideradas as mais brilhantes que houveram, como Hilbert.
+
+Apesar de muitos avanços e demonstração para gigantes números, nada foi totalmente eficaz para demonstrar que existem infintos primos gêmeos e nem mesmo foi encontrado um contra exemplo sequer para que a conjectura seja falha. 
+
+Enquanto ainda não é encontrada uma demonstração completa, nós, matemáticas em formação, apresentamos nesse trabalho avanços desse enigma e juntamente a essa pesquisa nos vemos perante a um desafio que deve ser compartilhado a todos amantes da matemática.
+
+### A Existência de Infinitos Primos 
+
+O famoso matemático Euclides, em sua obra Os Elementos demonstrou a infinidade de números primos. 
+Segue a demonstração:
+
+**Demonst*ração:** Tomando-se \textbf{L} uma lista finita qualquer de números primos:
+
+$$\textbf{L}= \{p_1, p_2, p_3, ..., p_n\}$$
+
+Pode-se mostrar que existem números primos que não estão nessa lista, da seguinte maneira: Sendo *P* o produto de todos os números primos na lista:
+
+ $$P = p_1\times p_2\times p_3\times ... \times p_n.$$
+ 
+E sendo, $$q = P + 1.$$
+
+Então, **q** pode ser primo ou não:
+
+- Se **q** é primo, então há pelo menos um número primo a mais que não está listado;
+
+- Se **q** não é primo, então algum fator primo **p** divide **q**. Esse fator **p** não está na nossa lista **L**, se estivesse, ele dividiria **P** (pois **P** é o produto de todos os número na lista).
+
+Mas como sabemos, **p** divide $P + 1 = q$. Então, para não deixar resto, **p** teria que dividir a diferença entre os dois números, que é $[(P+1)-P]$ ou seja, $1$. Mas não existe número primo que divida $1$, assim haveria uma contradição, logo, **p** não pode estar na lista.
+
+Isso significa que pelo menos mais um número primo existe além dos que estão na lista. Isso prova que para qualquer lista finita de números primos, há um número primo que não está na lista.
+
+Portanto, existem infinitos números primos. 
+
+
+
+No entanto, a existência de infinitos primos não nos garante a infinidade de primos gêmeos.
+
+Um fato interessante sobre os primos gêmeos é que ninguém sabe ao certo quem conjecturou. Alguns acreditam que foi Euclides, mas não há nada confirmado sobre sua origem. 
+
+### Descobertas ao Longo do Caminho
+
+Mesmo com nenhum resultado eficaz, muito se pesquisou sobre, e muitas foram descobertas. A seguir, enunciaremos algumas delas:
+
+- Dubner mostrou que $459 \times 28529\pm1$ são primos gêmeos;
+
+- Forbes em 1995 mostrou que $6797727 \times 215328\pm 1$ são primos gêmeos;
+
+- Lifchitz em 1999 mostrou que $361700055\times 239020\pm1$ são primos gêmeos. Também os números $65516468355 \times 333333 \pm 1$ são primos gêmeos.
+
+- Em janeiro de 2007, o projeto computacional sobre a distribuição dos números primos gêmeos, encontrou
+os maiores primos gêmeos contendo 58.771 dígitos: $2.003.663.613 \times 2195.000 \pm 1$.
+
+- Em julho de 2009, foram encontrados primos gêmeos ainda maiores, com 100.355 dígitos: $65.516468355 \times 2333.333 \pm 1$.
+
+- Em Abril de 2013, o matemático Yithang Zhang apresentou uma prova, da existência de um $n$ menor que 70 milhões, de tal maneira que existam infinitos pares de primos cuja a diferença entre eles seja $n$.
+
+- Em 2014, um ano depois, foi realizado um trabalho coletivo pela comunidade do projeto Polymath, em um evento que Yithang Zhang fora convidado para participar, juntamente com outros nome matemáticos, dentre eles Terence Tao, com a intenção de reduzir essa cota de 70 milhões, e conseguiram algo bem melhor, a validação do resultado para um $n$ inferior a 246.
+
+- Todos os pares de primos gêmeos, com exceção do $3$ e $5$ são da forma $(6k-1, 6k+1)$, uma vez que todos os primos, exceto 3, podem ser escritos da forma $6k\pm 1$. 
+Na reta $y=x+2$, estão presentes todos os pares ordenados que são primos gêmeos, porém note  nem todos seus pontos atendem a tal critério, não sendo obrigatoriamente primos gêmeos. O conjunto dos números primos gêmeos é limitado no seguinte sentido, a soma da série dos inversos dos números primos gêmeos converge, ao contrário da soma da série dos inversos dos números primos que diverge, como provado por Viggo Brun (1919). A constante de Brun, mostra a convergência dos inversos dos números primos gêmeos.
+
+
+Apesar das descobertas de uma quantidade relevante de primos gêmeos, isso não é suficiente para garantir seu resultado. A maioria dos primos gêmeos muito grandes,
+que se conhece, são da forma $k\times 2n\pm 1$, No entanto se $k$ não for muito grande, os testes de primalidade para os números serão de uma eficiência considerável.
+
+
+**Definição:** Um par de números primos $x$ e $y$ com $x>y$ é chamado de primos gêmeos se $x=y+2$.
+
+**Teorema de Sebá:**
+Se $x$ e $y$ são dois primos gêmeos maiores que três sob a forma $6n\pm1$, então, temos que $x^{2}-y^{2}$ é divisível por $24$, para todo $x>y$.
+
+**Demonstração** Dados dois primos gêmeos $x$ e $y$, escritos sob a forma $x=6n+1$ e $y=6n–1$ para $n$ natural. Assim:
+\begin{align*}
+    x^{2}-y^{2}&= (6n+1)^{2} - (6n-1)^{2}\\
+    x^{2}-y^{2}&= 36n^{2}+12n+1-36n^{2}+12n-1\\
+    x^{2}-y^{2}&=24n
+\end{align*}
+
+Por exemplo, podemos montar uma tabela e verificar os resultados:
+
+
+Observando a tabela acima, podemos notar que, apesar de encontrarmos pares gêmeos, não é para todo $n$ natural que encontramos primos gêmeos do tipo $6n\pm1$. Perceba que apenas as linhas na cor branca da nossa tabela são exemplos de primos gêmeos, como é o caso do $(5,7)$, $(11,13)$, $(17,19)$, $(29,31)$ e assim por diante.
+
+**Corolário:**
+A soma de dois primos gêmeos maiores que três é divisível por 12.
+
+**Demonstração:** Dados dois primos gêmeos $x$ e $y$ com $x-y=2$. Pelo teorema anterior $x^{2}-y^{2}=24n$, sendo $n$ natural não nulo. Assim,
+\begin{align*}
+(x-y)(x+y)=24n\\
+2(x+y)=24n\\
+x+y=12
+\end{align*}
+
+donde segue o resultado.
+
+**Definição:** Uma terna de primos é uma terna da forma $(p,p+2,p+6)$ ou $(p,p+4,p+6)$. Com exceção trivial das ternas $(2,3,5)$ e $(3,5,7)$.
+
+Note que uma terna de primos contém um par de primos gêmeos da forma $(p,p+2)$ ou $(p+4, p+6)$. Vejamos uma pequena tabela com cada um dos tipos:
+
+Assim como na tabela anterior, nas linhas de cor branca podemos observar as primeiras ternas como $(5,7,11)$, $(7,11,13)$, $(11,13,17)$ e assim sucessivamente.
+
+**Caracterização dos Primos Gêmeos** 
+Caracterização feita por Clement:
+
+Seja $n\leq2.$ Os inteiros $n$ e $n + 2$ são ambos primos, se e somente se:
+
+$$4[(n-1)!+1]+n \equiv 0\pmod{n+2}$$
+
+**Teorema de Wilson**. Se $p$ é um número primo, então  $(p-1)! \equiv -1 \pmod {p}$.
+
+Após enunciar o Teorema de Wilson, vamos demonstrar a caracterização dos números primos gêmeos.
+
+**Demonstração:** Se a congruência for satisfeita, então $n\neq2$, $4$ e $(n-1)!+1 \equiv 0 \pmod {n}$ e, pelo Teorema de Wilson, $n$ é primo. Por outro lado, $4(n-1)!+2 \equiv 0 \pmod{n+2}$, que multiplicado por $n(n+1)$, dá:
+$$[4(n+1)!+1]+2n^{2}+2n-4\equiv 0\pmod{n+2}.$$
+
+Então:
+$$4[(n+1)!+1] + (n+2)(2n-2)\equiv 0\pmod{n+2}$$
+
+Logo:
+$$(n+1)!+1\equiv0\pmod{n+2}.$$
+
+De acordo com o Teorema de Wilson, $n + 2$ é também primo. Reciprocamente, se $n$ e $n + 2$ são primos, então $n\neq2$ e:
+\begin{align*}
+    (n-1)! + 1 &\equiv0\pmod{n},\\
+    (n+1)! + 1 &\equiv0 \pmod{n+2}.
+\end{align*}
+
+Ora, 
+$$n(n+) = (n + 2)(n-1) + 2$$ 
+e daí,
+$$2(n-)! + 1 = k(n + 2)$$
+onde $k$ é inteiro.
+De $(n-1)!\equiv -1\pmod{n}$, resulta que $2k + 1\equiv0\pmod{n}$ e, fazendo uma substituição,
+$$4(n-1)! + 2\equiv-(n + 2) \pmod{n(n + 2)}.$$
+
+Assim:
+$$4[(n-1)! + 1] + n \equiv 0\pmod {n(n + 2)}.$$
+
+Portanto, a demonstração está concluída. 
+
+No entanto, a conjectura dos Primos Gêmeos continua sendo um dos pertinentes mistérios da matemática, O problema original, com $n = 2$, continua sem solução. Despertando dessa forma, mais interesse no campo da matemática por uma solução desse importante resultado.
+
+ 
