@@ -4,7 +4,7 @@ author: "Janaíne Martins"
 output: html_document
 ---
 
-## A perigosa conjectura de Collatz}
+## A perigosa conjectura de Collatz
 
  Os matemáticos, aconselham uns aos outros a ficarem bem longe dessa famosa conjectura, pois dizem que essa é uma verdadeira areia movediça mental para os amantes dos números. 
 
