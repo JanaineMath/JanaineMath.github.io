@@ -61,7 +61,7 @@ Portanto $\chi(L(G))=\chi '(G)$
 
 Um dos mais importantes Teoremas em Teoria dos grafos em geral, é o Teorema de Whitney, no qual salienta-se o grafo de linha. Vendo a importância desse Teorema e a utilização do tema que falamos em todo esse trabalho, o enunciaremos e o demonstraremos a seguir.
 
-**Teorema de Whitne:** $Dados$ $dois$ $grafos$ $conexos$ $e$ $simples$ $G$ $e$ $H,$ $eles$ $são$ $isomorfos$ $se,$ $e$ $somente$ $se,$ $L(G)$ $e$ $L(H)$ $são$ $isomorfos,$ $a$ $menos$ $de$ $K_{1,3}$ $e$ $K_{3},$ $não$ $são$ $isomorfos,$ $mas$ $possuem$ $grafos$ $linha$ $isomorfos.$
+**Teorema de Whitne:** Dados dois grafos conexos e simples $G$ e $H$, eles são isomorfos se, e somente se, $L(G)$ e $L(H)$ são isomorfos, a menos de $K_{1,3}$ e $K_{3}$, não são isomorfos, mas possuem grafos linha isomorfos.
 
 **Demonstração:**
 Primeiro deve-se mostrar a exceção do teorema: se um dos grafos for $K_{1,3}$ ou o $K_{3}$, seus respectivos grafos linha são iguais ao grafo $K_{3}$ Figura 2 e Figura 3.
