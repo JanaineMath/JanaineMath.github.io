@@ -1,0 +1,104 @@
+---
+title: "Grafos de Linha"
+author: "Janaíne Martins"
+output: html_document
+---
+
+### Introdução
+
+Na Teoria dos Grafos, existem ínumeros tipos de Grafos, tais que, mesmo sem perceber, usamos frequentemente em nosso dia-a-dia. Seja no momento de escolher por qual rua passar, nas ligações, até mesmo nas mensagens que enviamos em nosso cotidiano.Portanto, percebemos o quanto é importante esse campo de pesquisa da matemática, seja ele em nossas vidas rotineiras, ou seja também em várias outras linhas de pesquisas matemáticas.
+
+Tudo começa com um artigo sobre o famoso problema das sete pontes da cidade de Koningsberg publicado por Euler. Ao longo dos anos, essa teoria foi ganhando seu espaço no campo matemático ao perceberem seus eficientes resultados
+nas áreas de Álgebra, Topologia e tantas outras. No entando, os estudos sobre grafos não ficou apenas no âmbito matemático, sendo também eficaz na resolução de problemas nas áreas de Computação, Química, Física, entre outras. 
+
+Ao passar do tempo a Teoria de Grafos, a partir de pesquisas e descobertas, foi ganhando corpo e dentre ela foram surgindo vários outros ramos, como os diferentes tipos de grafos, por exemplo os conexos, bipartidos, planares, eulerianos, hamiltonianos, de linha e vários outros. Nesse trabalho, falaremos um pouco sobre o grafo de linha, pouco estudado comparado com outros, mas não menos importante.
+
+**Definição:** Um grafo $G$ é definido pelo conjunto de aretas $E(G)$ e pelo cojunto de vértices, isto é, $V(G)$, ambos não nulos, e cada aresta está associada a um par de vétices.
+
+Depois de definirmos um grafo, podemos definir um grafo de linha, adotaremos $L(G)$ para sua notação. 
+
+Dado um grafo $G$, seu grafo de linha $L(G)$ é um grafo tal que:
+
+- Cada vértice de $L(G)$ representa uma aresta de $G$;
+- Dois vértices de $L(G)$ são adjacentes se, e somente se, suas arestas correspondentes partilham o mesmo fim (são incidentes) em $G$;
+
+\hspace*{0.6cm}Ou seja,um grafo de linha é o grafo de intercessão das arestas de $G$, representando cada aresta pelo conjunto de suas duas extremidades.
+
+Uma interessante aplicação dos grafos de linha, pode ser vista ao analizarmos a programação de rodadas de jogos de um campeonato, no qual há um número par de times, onde todos os times devem jogar um contra o outro no campeonato, e um time não pode ter dois jogos na mesma rodada.
+
+### Interessantes Caracterizações
+
+- Para um grafo simples G, existe uma solução L(H) = G se e somente se G decompõem-se em sub-grafos completos, com cada vértice de G aparecendo no máximo em dois desses sub-grafos completos.
+
+- Um grafo simples G é grafo linha de algum grafo simples se, e somente se, G não possui nenhum dos grafos da figura 1 como sub-grafos induzidos.
+
+### Propriedades
+
+Os grafos de linha, apresentam interessantes propriedades, muitas delas, englobam várias áreas de estudos decorrentes da Teoria dos grafos, seguem algumas delas:
+
+- O grafo de linha de um grafo conexo é conexo;
+    
+**Demonstração:**
+ Seja $G$ um grafo, se é conexo, ele conterá um caminho que conecta duas de suas arestas, que se traduz em um caminho em $L(G)$ contendo dois dos vértices de $L(G)$. Sendo assim $L(G)$ é conexo.
+    
+- O número cromático da aresta de um grafo $G$ é igual ao número cromatico do vértice do seu grafo de linha $L(G)$;
+    
+**Demonstração:**
+Seja $G$ um grafo, e $L(G)$ seu grafo de linha.
+Seja também $\pi:S'\rightarrow C$, onde $S(G)=V(G)\bigcup E(G)$ e $C$ é o conjunto de cores.
+Sabemos que $E(G)=V(L(G))$.
+Quando $S' = V(L(G))$ dizemos que $\pi$ é uma coloração de vértices de $L(G)$. O menor inteiro $k$ possível para se obter uma $k-coloração$ dos vértices de $L(G)$ é denominado número cromático e denotado por $\chi(L(G)).$
+    
+Analogamente, quando $S'=E(G)$ dizemos que $\pi$ é uma coloração de arestas de $G$. O menor inteiro $k$ possível para se obter uma $k-coloração$ das arestas de $G$ é denominado índice cromático e denotado por $\chi '(G)$.
+Portanto $\chi(L(G))=\chi '(G)$
+
+-item Se $G$ é um grafo regular de grau $k$, então $L(G)$ é regular com grau $2k-2$.
+    
+     
+- Se dois grafos simples são isomórficos, os seus grafos de linha também são isomorfos.
+   
+**Demonstração** A demonstração pode ser concluída pelo Teorema enunciado a seguir.
+
+Um dos mais importantes Teoremas em Teoria dos grafos em geral, é o Teorema de Whitney, no qual salienta-se o grafo de linha. Vendo a importância desse Teorema e a utilização do tema que falamos em todo esse trabalho, o enunciaremos e o demonstraremos a seguir.
+
+**Teorema de Whitne:** $Dados$ $dois$ $grafos$ $conexos$ $e$ $simples$ $G$ $e$ $H,$ $eles$ $são$ $isomorfos$ $se,$ $e$ $somente$ $se,$ $L(G)$ $e$ $L(H)$ $são$ $isomorfos,$ $a$ $menos$ $de$ $K_{1,3}$ $e$ $K_{3},$ $não$ $são$ $isomorfos,$ $mas$ $possuem$ $grafos$ $linha$ $isomorfos.$
+
+**Demonstração:**
+Primeiro deve-se mostrar a exceção do teorema: se um dos grafos for $K_{1,3}$ ou o $K_{3}$, seus respectivos grafos linha são iguais ao grafo $K_{3}$ Figura 2 e Figura 3.
+
+Notamos então que os grafos for $K_{1,3}$ e $K_{3}$, são as exceções do teorema, como supracitado.
+Uma condição necessária para $L(G)$ e $L(G')$ serem isomorfos é que possuam a mesma quantidade de arestas. os únicos grafos conexos não isomorfos com até 4 vértices são os seguintes. Figura 4.
+
+Note que os únicos grafos de até quatro vértices com a mesma quantidade de arestas e vértices, são os $G7$ e $G8$ da Figura 4, porém $L(G7)$ não é isomorfo a $L(G8)$.
+
+Supondo que $G$ e $G'$ tem pelo menos 5 vértices e que $L(G)$ e $L(G')$ são isomorfos sobre um isomorfismo $\phi_{1}$, onde $\phi_{1}$ é uma bijeção do conjunto de arestas de $G$ no conjunto de arestas de $G'$.
+
+Mostraremos que $\phi_{1}$ transforma o subgrafo induzido $K_{1,3}$ de $G$ em outro subgrafo induzido $K_{1,3}$ de $G'$. Figura 5.
+
+Considere as arestas $e_{1}, e_{2}$ e $e_{3}$ da Figura 5. Elas são exatamente as arestas do subgrafo $K_{1,3}$ do nosso grafo $G$. Como $G$ é conexo e de até cinco vértices, então existe uma aresta $e$ adjacente a apenas um ou a todas as arestas $e_{1}, e_{2}$ e $e_{3}$ como mostrado na figura acima.
+
+Observe que $\phi_{1}(e_{1})$, $\phi_{1}(e_{2})$, $\phi_{1}(e_{3})$ formam tanto o subgrafo $K_{1,3}$ quanto um triângulo em $G'$.
+Se $\phi_{1}(e_{1})$, $\phi_{1}(e_{2})$ e $\phi_{1}(e_{3})$ formassem um triângulo em $G'$, $\phi_{1}(e)$ deveria ser adjacente a exatamente dois entre três $\phi_{1}(e_{1})$, $\phi_{1}(e_{2})$, $\phi_{1}(e_{3})$.
+Como $\phi_{1}(e)$ deve ser adjacente a um único ou aos três ao mesmo tempo, a contradição mostra que $\{\phi_{1}(e_{1})$, $\phi_{1}(e_{2})$, $\phi_{1}(e_{3})\}$ não é um triângulo em $G'$ e portanto forma uma estrela no vértice $v'$ de $G'$.
+Note que o resultado semelhante vale para $\phi_{1}^{-1}$, uma vez que é um isomorfismo de $L(G)$ em $L(G')$.
+
+
+Seja $S(u)$ o subgrafo estrela de $G$ formado pelas arestas de $G$ que incidem no vértice $u$ de $G$. Seguindo um raciocínio parecido com o anterior, conseguimos mostrar que $\phi_{1}$ mapeia todo $S(u)$ para o subgrafo estrela $S(u')$ de $G'$.
+Definimos por fim, $\phi: V(G)\rightarrow V(G')$ e definindo $\phi(u)=u'$ se $\phi_{1}(S(u))=S(u')$.
+Segue que $S(u)=S(u')$ apenas quando $u=v$, e para $v'$ em $G'$ $\phi_{1}^{-1}(S(v'))=S(v)$ para algum $v\in V(G)$ e pela definição de $\phi$, $\phi(v)=v'$.
+
+
+Finalmente observamos então que, se $uv$ são arestas de $G$, então $\phi_{1}(uv)$ pertence tanto a $S(u')$ quanto a $S(v')$.
+Isso significa que $u'v'$ é um aresta de $G'$. Mas $u'=\phi(u)$ e $v'=\phi(v)$.
+Consequentemente, $\phi(u)\phi(v)$ é uma aresta de $G'$. E se $u$ não é adjacente a $v$ em $G$, $\phi(u)\phi(v)$ não devem ser adjacents em $G'$.
+Caso contrário, $\phi(u)\phi(v)$ pertence a $S(\phi(u))$ e a $S(\phi(v))$ e daqui temos que $\phi_{1}^{-1}(\phi(u)\phi(v))=uv\in E(G)$, o que é absurdo.
+Portanto, $G$ e $G'$ são isomorfos e $\phi$ é seu isomorfismo.
+
+
+Concluímos então que a função que leva um grafo $G$ em $L(G)$ é uma função bijetora.
+Concluímos também que, tirando a exceção do teorema, basta analisarmos os grafos linha de dois grafos quaisquer para podermos afirmar o isomorfismo entre dois grafos.
+
+
+Ao passar do tempo a Teoria de Grafos, a partir de pesquisas e descobertas, foi ganhando corpo e dentre ela foram surgindo vários outros ramos, como os diferentes tipos de grafos, por exemplo os conexos, bipartidos, planares, eulerianos, hamiltonianos, de linha e vários outros. Nesse trabalho, falaremos um pouco sobre o grafo de linha, pouco estudado comparado com outros, mas não menos importante.
+
+***Observação*** Este trabalho contou com a colaboração de João Goller.
