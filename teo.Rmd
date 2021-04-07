@@ -272,3 +272,4 @@ Portanto, a demonstração está concluída.
 No entanto, a conjectura dos Primos Gêmeos continua sendo um dos pertinentes mistérios da matemática, O problema original, com $n = 2$, continua sem solução. Despertando dessa forma, mais interesse no campo da matemática por uma solução desse importante resultado.
 
  
+***Observação:*** Este trabalho contou com a colaboração de Júlia Martins
