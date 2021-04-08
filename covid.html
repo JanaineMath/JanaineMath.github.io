@@ -184,14 +184,16 @@ pre code {
 <p>Dentre outras tantas áreas que podem ser exploradas, dada a complexidade e gravidade da doença e da grande quantidade de dados que são gerados diariamente.</p>
 <div id="distribuição-de-bernoulli" class="section level4">
 <h4>Distribuição de Bernoulli</h4>
-<p><strong>Definição: Ensaio de Bernoulli</strong> Um ensaio de Bernoulli é um experimento aleatório com apenas dois resultados possíveis: <code>sucesso&#39;&#39; e</code>fracasso’’.</p>
+<p><strong>Definição: Ensaio de Bernoulli</strong></p>
+<p>Um ensaio de Bernoulli é um experimento aleatório com apenas dois resultados possíveis: <code>sucesso&#39;&#39; e</code>fracasso’’.</p>
 <p>A partir de um ensaio de Bernoulli, definimos a variável aleatória <span class="math display">\[\begin{eqnarray*}
 X =\left\{\begin{array}{lllllll}
 1, &amp;\text{ se sucesso}\\
 0, &amp;\text{ se fracasso}\\
 \end{array}\right. 
-\end{eqnarray*}\]</span> para então definir a distribuição de probabilidades para <span class="math inline">\(X\)</span>, a <strong>distribuição de Bernoulli</strong>, que dá origem a todas as outras distribuições discretas.</p>
-<p><strong>Definição: Distribuição de Bernoulli</strong> Uma variável aleatória <span class="math inline">\(X\)</span>, como definica anteriormente, segue uma  com parâmetro <span class="math inline">\(0\leq p\leq 1\)</span> se a sua função de probabilidade é dada por <span class="math display">\[P(X = x) = p^{x} (1 - p) ^{1 - x},\;\;\;\;\; x = 0, 1,\]</span> ou seja, <span class="math inline">\(P(X = 1) = p\)</span> e <span class="math inline">\(P(X = 0) = 1-p\)</span>, e denotamos por <span class="math inline">\(X\sim Bern(p)\)</span>.</p>
+\end{eqnarray*}\]</span> para então definir a distribuição de probabilidades para <span class="math inline">\(X\)</span>, a distribuição de Bernoulli, que dá origem a todas as outras distribuições discretas.</p>
+<p><strong>Definição: Distribuição de Bernoulli</strong></p>
+<p>Uma variável aleatória <span class="math inline">\(X\)</span>, como definica anteriormente, segue uma <strong>distribuição de Bernoulli</strong> com parâmetro <span class="math inline">\(0\leq p\leq 1\)</span> se a sua função de probabilidade é dada por <span class="math display">\[P(X = x) = p^{x} (1 - p) ^{1 - x},\;\;\;\;\; x = 0, 1,\]</span> ou seja, <span class="math inline">\(P(X = 1) = p\)</span> e <span class="math inline">\(P(X = 0) = 1-p\)</span>, e denotamos por <span class="math inline">\(X\sim Bern(p)\)</span>.</p>
 <p><strong>Esperança e Variância:</strong></p>
 <p>São características importantes para descrevermos a distribuição. Se <span class="math inline">\(X \sim Bern(p)\)</span>, então</p>
 <p><span class="math display">\[\begin{eqnarray*}
@@ -209,9 +211,14 @@ Var(X) &amp;=&amp; p(1 - p)
 <li>Se foi (<span class="math inline">\(X=1\)</span>) ou não (<span class="math inline">\(X=0\)</span>): infectado, hospitalizado, a óbito, para a UTI, vacinado, dentre outros;</li>
 <li>Se tem (<span class="math inline">\(X=1\)</span>) ou não (<span class="math inline">\(X=0\)</span>) febre, cansaço, falta de ar, …; comorbidades; se teve ou não contato com alguém infectado.</li>
 </ul>
-<p><strong>Distribuição de Poisson</strong> - Uma outra característica que surge imediatamente no caso da COVID-19 é os dados de {}. Uma distribuição geralmente utilizada para descrever a aleatoriedade deste tipo de variável é a {}.</p>
-<p><strong>Definição: Distribuição de Poisson</strong> Diz-se que uma variável aleatória Y tem distribuição de Poisson com parâmetro <span class="math inline">\(\lambda\)</span> se sua função de probabilidade é dada por: <span class="math display">\[P(Y = y) = \dfrac{\lambda^{y}e^{-\lambda}}{y!},\;\;\;\;\;  y = 0, 1, 2, ...\]</span> e denotamos por <span class="math inline">\(Y\sim Poi(\lambda).\)</span></p>
-<p><strong>Esperança e Variânça:</strong> Se <span class="math inline">\(Y \sim Poi(\lambda)\)</span>, então <span class="math inline">\(E (Y) = Var(Y) = \lambda\)</span>.</p>
+<p><strong>Distribuição de Poisson</strong></p>
+<ul>
+<li>Uma outra característica que surge imediatamente no caso da COVID-19 é os dados de contagem. Uma distribuição geralmente utilizada para descrever a aleatoriedade deste tipo de variável é a distribuição de Poisson.</li>
+</ul>
+<p><strong>Definição: Distribuição de Poisson</strong></p>
+<p>Diz-se que uma variável aleatória Y tem distribuição de Poisson com parâmetro <span class="math inline">\(\lambda\)</span> se sua função de probabilidade é dada por: <span class="math display">\[P(Y = y) = \dfrac{\lambda^{y}e^{-\lambda}}{y!},\;\;\;\;\;  y = 0, 1, 2, ...\]</span> e denotamos por <span class="math inline">\(Y\sim Poi(\lambda).\)</span></p>
+<p><strong>Esperança e Variânça:</strong></p>
+<p>Se <span class="math inline">\(Y \sim Poi(\lambda)\)</span>, então <span class="math inline">\(E (Y) = Var(Y) = \lambda\)</span>.</p>
 <p><strong>Exemplos</strong> - No estudo de subnotificação no caso da COVID-19, podemos pensar que o número verdadeiro diário de casos (<span class="math inline">\(Y = 0, 1, 2, ...\)</span>) por município no Brasil segue uma distribuição de Poisson e <span class="math inline">\(\lambda\)</span> representa a média de casos.</p>
 <p>Alguns outros exemplos são:</p>
 <ul>
@@ -219,21 +226,19 @@ Var(X) &amp;=&amp; p(1 - p)
 </ul>
 <p><strong>Distribuição Binomial</strong></p>
 <ul>
-<li>Por fim, apresentamos a {} que descreve a aleatoriedade para variáveis aleatórias com a seguinte características: contar o número de sucessos em <span class="math inline">\(y\)</span> ensaios independentes de Bernoulli com parâmetro <span class="math inline">\(p\)</span>. Assim, obteremos a distribuição Binomial com parâmetros <span class="math inline">\(y\)</span> e <span class="math inline">\(p\)</span>.</li>
+<li>Por fim, apresentamos a distribuição Binomial que descreve a aleatoriedade para variáveis aleatórias com a seguinte características: contar o número de sucessos em <span class="math inline">\(y\)</span> ensaios independentes de Bernoulli com parâmetro <span class="math inline">\(p\)</span>. Assim, obteremos a distribuição Binomial com parâmetros <span class="math inline">\(y\)</span> e <span class="math inline">\(p\)</span>.</li>
 </ul>
 <p><strong>Definição: Distribuição Binomial</strong></p>
 <p>Uma variável aleatória <span class="math inline">\(Z\)</span> segue distribuição Binomial com parâmetros <span class="math inline">\(y\)</span> e <span class="math inline">\(p\)</span> se sua função de probabilidade é dada por:</p>
 <p><span class="math display">\[\begin{eqnarray*}
     P(Z = z) = {y \choose z} p^{z}(1 - p)^{y-z}, \;\;\;\;\; z = 0, 1, 2, ..., y.
 \end{eqnarray*}\]</span></p>
-<p><strong>Esperança e Variânça:</strong> Se <span class="math inline">\(Z \sim B(y, p)\)</span>, então: <span class="math display">\[\begin{eqnarray*}
+<p><strong>Esperança e Variânça:</strong></p>
+<p>Se <span class="math inline">\(Z \sim B(y, p)\)</span>, então: <span class="math display">\[\begin{eqnarray*}
 E (Z) &amp;=&amp; yp\\
 Var(Z) &amp;=&amp; yp (1 - p)
 \end{eqnarray*}\]</span></p>
-<p><strong>Exemplos</strong></p>
-<ul>
-<li>No estudo de subnotificação no caso da COVID-19, podemos pensar que há um número verdadeiro de casos em um determinado município, porém apenas alguns são notificados e registrados. Então de <span class="math inline">\(y\)</span> casos da COVID-19 em um dia, um número <span class="math inline">\(Z=0, 1, 2, ..., y\)</span> são notificados e a distribuição Binomial surge naturalmente neste contexto.</li>
-</ul>
+<p><strong>Exemplos</strong> - No estudo de subnotificação no caso da COVID-19, podemos pensar que há um número verdadeiro de casos em um determinado município, porém apenas alguns são notificados e registrados. Então de <span class="math inline">\(y\)</span> casos da COVID-19 em um dia, um número <span class="math inline">\(Z=0, 1, 2, ..., y\)</span> são notificados e a distribuição Binomial surge naturalmente neste contexto.</p>
 <p>Alguns outros exemplos são:</p>
 <ul>
 <li>Número de sintomas (de uma lista com <span class="math inline">\(y\)</span> sintomas), número de comorbidades, dentre outros.</li>
@@ -270,16 +275,13 @@ Z|Y=y &amp;\sim&amp; Binomial(y, p)
 <li>componente sistemático</li>
 <li>função de ligação</li>
 </ul>
-</div>
-<div id="componente-aleatório" class="section level4">
-<h4>Componente Aleatório</h4>
+<p><strong>Componente Aleatório</strong></p>
 <p>É o componente que especifica VR <span class="math inline">\(Y\)</span> e sua distribuição de probabilidades. Considera-se <span class="math inline">\(Y_1, Y_2, Y_3...Y_n\)</span> uma sequência de variáveis aleatórias independentes e seguindo uma distribuição de probabilidades. Por exemplo, podemos dizer que e que para <span class="math inline">\(n\)</span> municípios teremos <span class="math inline">\(Y_1, Y_2, ..., Y_n\sim Poi(\lambda)\)</span>, independentes e identicamente distribuídas.</p>
-<p><strong>Componente Sistemático</strong> É o componente que especifica as VEs. Tal componente entra como preditor linear na equação do modelo e é o que buscamos relacionar com a VR. Dadas <span class="math inline">\(k\)</span> VEs, digamos <span class="math inline">\(x_1, x_2, ..., x_k\)</span>, o preditor linear é dado por <span class="math display">\[\begin{eqnarray*}
+<p><strong>Componente Sistemático</strong></p>
+<p>É o componente que especifica as VEs. Tal componente entra como preditor linear na equação do modelo e é o que buscamos relacionar com a VR. Dadas <span class="math inline">\(k\)</span> VEs, digamos <span class="math inline">\(x_1, x_2, ..., x_k\)</span>, o preditor linear é dado por <span class="math display">\[\begin{eqnarray*}
 \beta_0 +  \beta_1 x_1 + \beta_2x_2+...+\beta_kx_k
 \end{eqnarray*}\]</span> Por simplicidade na notação, vamos considerar como o preditor linear apenas <span class="math display">\[\alpha + \beta x\]</span></p>
-</div>
-<div id="função-de-ligação" class="section level4">
-<h4>Função de Ligação</h4>
+<p><strong>Função de Ligação</strong></p>
 <p>A função de ligação, como o nome indica, faz a ligação entre os componentes aleatório e sistemático. Mais especificamente, é uma função <span class="math inline">\(g(\cdot)\)</span> que liga o valor esperado <span class="math inline">\(E(Y)=\mu\)</span> de <span class="math inline">\(Y\)</span> (que depende da sua distribuição) com o preditor linear <span class="math inline">\(\alpha + \beta x\)</span>: <span class="math display">\[\begin{eqnarray*}
 g(\mu) = \alpha + \beta x
 \end{eqnarray*}\]</span></p>
@@ -289,9 +291,9 @@ g(\mu) = \alpha + \beta x
 </div>
 <div id="modelo-de-regressão-de-poisson" class="section level3">
 <h3>Modelo de regressão de Poisson</h3>
-<p><strong>Componente aleatório:</strong> supomos <span class="math inline">\(Y\sim Poi(\lambda)\)</span>. Note que <span class="math inline">\(\mu = E(Y) = \lambda\)</span> (<span class="math inline">\(\mu\)</span> é uma notação genérica).</p>
+<p><strong>Componente aleatório:</strong> Supomos <span class="math inline">\(Y\sim Poi(\lambda)\)</span>. Note que <span class="math inline">\(\mu = E(Y) = \lambda\)</span> (<span class="math inline">\(\mu\)</span> é uma notação genérica).</p>
 <p><strong>Componente sistemático:</strong> consideramos como sendo o preditor linear <span class="math inline">\(\alpha + \beta x\)</span>.</p>
-<p><strong>Função de ligação:</strong> Como <span class="math inline">\(\mu&gt;0\)</span>, a função identidade não é adequada pois o preditor linear pode ser um número real, enquanto <span class="math inline">\(\mu&gt;0\)</span>. Assim, uma escolha é <span class="math inline">\(g(\mu) = \log(\mu)\in \mathbb{R}\)</span> e assim obteremos um modelo chamado de {}: <span class="math display">\[\begin{eqnarray*}
+<p><strong>Função de ligação:</strong> Como <span class="math inline">\(\mu&gt;0\)</span>, a função identidade não é adequada pois o preditor linear pode ser um número real, enquanto <span class="math inline">\(\mu&gt;0\)</span>. Assim, uma escolha é <span class="math inline">\(g(\mu) = \log(\mu)\in \mathbb{R}\)</span> e assim obteremos um modelo chamado de <strong>log-linear</strong>: <span class="math display">\[\begin{eqnarray*}
 log (\mu) = \alpha + \beta x
 \end{eqnarray*}\]</span></p>
 <p><strong>Exemplo:</strong> Dentro do contexto que estamos estudando, podemos considerar que <span class="math inline">\(y\)</span> é o número de casos em municípios e que <span class="math inline">\(x\)</span> é se havia ou não medidas restritivas. Com os dados em mãos, poderemos estimar e interpretar como <span class="math inline">\(x\)</span> se relacionar com <span class="math inline">\(y\)</span> através de sua média.</p>
@@ -315,7 +317,15 @@ g(\mu) = log \left(\dfrac{\mu}{1-\mu}\right) = \alpha + \beta x
 <p><strong>Binomial</strong></p>
 <p><span class="math display">\[\log\left(\dfrac{\mu}{1-\mu}\right)=\alpha + \beta x \;\;\;\;\; \Leftrightarrow \;\;\;\;\; \mu = \dfrac {e^{\alpha + \beta x}} {1 + e^{\alpha + \beta x}}\]</span></p>
 <p><strong>Poisson</strong></p>
-<p><span class="math display">\[\log(\mu)=\alpha + \beta x \;\;\;\;\; \Leftrightarrow \;\;\;\;\; \mu = e^{\alpha + \beta x}\]</span></p>
+<p><span class="math display">\[\log(\mu)=\alpha + \beta x \;\;\;\;\; \Leftrightarrow \;\;\;\;\; \mu = e^{\alpha + \beta x}\]</span> LACHMANN, Alexander. Correcting under-reported COVID-19 case numbers. MedRxiv, 2020.</p>
+<p>DR THEO ECONOMOU, DR OLIVER STONE. Bayesian Hierarchical Frameworks for Correcting Under-reporting and Delayed Reporting of Count Data.Institute for Data Science and Artificial Intelligence, University of Exeter. Disponível em: <a href="https://www.youtube.com/watch?v=V3F-TFytodg%7D" class="uri">https://www.youtube.com/watch?v=V3F-TFytodg}</a></p>
+<p>AGRESTI, Alan. Categorical data analysis. John Wiley &amp; Sons, 2003.</p>
+<p>Slodkowski, L., da Silva Smolski, F. M., Chassot, T., Reis, D. I., Kaszubowski, E., &amp; Battisti, I. D. E. (2018). PROJETO DE EXTENSÃO EM ANÁLISE ESTATÍSTICA COM O SOFTWARE LIVRE R. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, 10(3)</p>
+<p>FARIAS, A. M. L.; KUBRUSLY, J. Q. ; SOUZA, M. A. O.Probabilidade e variáveis aleatórias unidimensionais. 2018.</p>
+<p>Coronavírus//Brasil. Disponível em:<a href="https://covid.saude.gov.br/" class="uri">https://covid.saude.gov.br/</a>.</p>
+<p>Portal da transparência. Disponível em:<a href="https://transparencia.registrocivil.org.br/inicio" class="uri">https://transparencia.registrocivil.org.br/inicio</a>.</p>
+<p>Stoner, Oliver, Theo Economou, and Gabriela Drummond Marques da Silva. “A hierarchical framework for correcting under-reporting in count data.” Journal of the American Statistical Association (2019).</p>
+<p>Nelder, John Ashworth, and Robert WM Wedderburn. “Generalized linear models.” Journal of the Royal Statistical Society: Series A (General) 135.3 (1972): 370-384.</p>
 </div>
 </div>
 

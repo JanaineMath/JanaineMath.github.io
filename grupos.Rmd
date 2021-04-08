@@ -117,7 +117,7 @@ Tendo em vista que $A_5$ é subgrupo de $S_5$ e $S_5 $ é o grupo das permutaç�
        
 Ex: se $A=\{1,2,3,4,5\},~ \alpha\in S_5$ tal que
        
-\alpha: A $\rightarrow$ A
+$\alpha$ : A $\rightarrow$ A
 
 1 $\mapsto$ 1\nonumber
 
@@ -143,3 +143,9 @@ A permutação $\alpha$ é par.
     Seja $G$ um grupo simples de ordem $60$. Então $G$ é isomorfo ao grupo $A_5$.
    
 Portanto, existe grupo simples de ordem 60.
+
+**Referências:**
+
+Arnaldo Garcia; Lequain, Y. . Elementos de Algebra. Rio de Janeiro: Projeto Euclides-IMPA, 2002. 327p.
+
+SANTOS, M. L. O..Sobre grupos simples finitos. Belo Horizonte: UFMG 2015.

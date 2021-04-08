@@ -24,6 +24,7 @@ Dentre outras tantas áreas que podem ser exploradas, dada a complexidade e grav
 
 #### Distribuição de Bernoulli
 **Definição: Ensaio de Bernoulli**
+
 Um ensaio de Bernoulli é um experimento aleatório com apenas dois resultados possíveis: ``sucesso'' e  ``fracasso''.
 
 A partir de um ensaio de Bernoulli, definimos a variável aleatória
@@ -33,11 +34,12 @@ X =\left\{\begin{array}{lllllll}
 0, &\text{ se fracasso}\\
 \end{array}\right. 
 \end{eqnarray*}
-para então definir a distribuição de probabilidades para $X$, a **distribuição de Bernoulli**, que dá origem a todas as outras distribuições discretas.
+para então definir a distribuição de probabilidades para $X$, a distribuição de Bernoulli, que dá origem a todas as outras distribuições discretas.
 
 
 **Definição: Distribuição de Bernoulli**
-Uma variável aleatória $X$, como definica anteriormente, segue uma \textbf{distribuição de Bernoulli} com parâmetro $0\leq p\leq 1$ se a sua função de probabilidade é dada por
+
+Uma variável aleatória $X$, como definica anteriormente, segue uma **distribuição de Bernoulli** com parâmetro $0\leq p\leq 1$ se a sua função de probabilidade é dada por
 $$P(X = x) = p^{x} (1 - p) ^{1 - x},\;\;\;\;\; x = 0, 1,$$
 ou seja, $P(X = 1) = p$ e $P(X = 0) = 1-p$, e denotamos por $X\sim Bern(p)$.
 
@@ -68,16 +70,19 @@ Alguns outros exemplos são:
 - Se tem ($X=1$) ou não ($X=0$) febre, cansaço, falta de ar, ...; comorbidades; se teve ou não contato com alguém infectado.
 
 **Distribuição de Poisson**
-- Uma outra característica que surge imediatamente no caso da COVID-19 é os dados de {\it contagem}. Uma distribuição geralmente utilizada para descrever a aleatoriedade deste tipo de variável é a {\bf distribuição de Poisson}.
+
+- Uma outra característica que surge imediatamente no caso da COVID-19 é os dados de contagem. Uma distribuição geralmente utilizada para descrever a aleatoriedade deste tipo de variável é a distribuição de Poisson.
 
 
 **Definição: Distribuição de Poisson**
+
 Diz-se que uma variável aleatória Y tem distribuição de Poisson com parâmetro $\lambda$ se
 sua função de probabilidade é dada por:
 $$P(Y = y) = \dfrac{\lambda^{y}e^{-\lambda}}{y!},\;\;\;\;\;  y = 0, 1, 2, ...$$
 e denotamos por $Y\sim Poi(\lambda).$
 
 **Esperança e Variânça:**
+
 Se  $Y \sim Poi(\lambda)$, então $E (Y) = Var(Y) = \lambda$.
 
 **Exemplos**
@@ -89,7 +94,7 @@ Alguns outros exemplos são:
 
 **Distribuição Binomial**
 
-- Por fim, apresentamos a {\bf distribuição Binomial} que descreve a aleatoriedade para variáveis aleatórias com a seguinte características: contar o número de sucessos em $y$ ensaios independentes de Bernoulli com parâmetro $p$. Assim, obteremos a distribuição Binomial com parâmetros $y$ e $p$.
+- Por fim, apresentamos a distribuição Binomial que descreve a aleatoriedade para variáveis aleatórias com a seguinte características: contar o número de sucessos em $y$ ensaios independentes de Bernoulli com parâmetro $p$. Assim, obteremos a distribuição Binomial com parâmetros $y$ e $p$.
 
 
 **Definição: Distribuição Binomial**
@@ -100,14 +105,15 @@ Uma variável aleatória $Z$ segue distribuição Binomial com parâmetros $y$ e
     P(Z = z) = {y \choose z} p^{z}(1 - p)^{y-z}, \;\;\;\;\; z = 0, 1, 2, ..., y.
 \end{eqnarray*}
 
-**Esperança e Variânça:** Se $Z \sim B(y, p)$, então:
+**Esperança e Variânça:**
+
+Se $Z \sim B(y, p)$, então:
 \begin{eqnarray*}
 E (Z) &=& yp\\
 Var(Z) &=& yp (1 - p)
 \end{eqnarray*}
 
 **Exemplos**
-
 - No estudo de subnotificação no caso da COVID-19, podemos pensar que há um número verdadeiro de casos em um determinado município, porém apenas alguns são notificados e registrados. Então de $y$ casos da COVID-19 em um dia, um número $Z=0, 1, 2, ..., y$ são notificados e a distribuição Binomial surge naturalmente neste contexto.
 
 Alguns outros exemplos são:
@@ -146,11 +152,13 @@ Z|Y=y &\sim& Binomial(y, p)
  - função de ligação
 
 
-#### Componente Aleatório
+**Componente Aleatório**
+
 É o componente que especifica VR $Y$ e sua distribuição de probabilidades. Considera-se $Y_1, Y_2, Y_3...Y_n$ uma sequência de variáveis aleatórias independentes e seguindo uma distribuição de probabilidades. Por exemplo, podemos dizer que e que para $n$ municípios teremos $Y_1, Y_2, ..., Y_n\sim Poi(\lambda)$, independentes e identicamente distribuídas.
 
 
 **Componente Sistemático**
+
 É o componente que especifica as VEs. Tal componente entra como preditor linear na equação do modelo e é o que buscamos relacionar com a VR. Dadas $k$ VEs, digamos $x_1, x_2, ..., x_k$, o preditor linear é dado por
 \begin{eqnarray*}
 \beta_0 +  \beta_1 x_1 + \beta_2x_2+...+\beta_kx_k
@@ -159,7 +167,8 @@ Por simplicidade na notação, vamos considerar como o preditor linear apenas $$
 
 
 
-#### Função de Ligação
+**Função de Ligação**
+
 A função de ligação, como o nome indica, faz a ligação entre os componentes aleatório e sistemático. Mais especificamente, é uma função $g(\cdot)$ que liga o valor esperado $E(Y)=\mu$ de $Y$ (que depende da sua distribuição) com o preditor linear $\alpha + \beta x$:
 \begin{eqnarray*}
 g(\mu) = \alpha + \beta x
@@ -176,11 +185,11 @@ Outras funções de ligação permitem que $\mu$ seja relacionado de forma não 
 
 ### Modelo de regressão de Poisson
 
-**Componente aleatório:** supomos $Y\sim Poi(\lambda)$. Note que $\mu = E(Y) = \lambda$ ($\mu$ é uma notação genérica).
+**Componente aleatório:** Supomos $Y\sim Poi(\lambda)$. Note que $\mu = E(Y) = \lambda$ ($\mu$ é uma notação genérica).
 
 **Componente sistemático:** consideramos como sendo o preditor linear $\alpha + \beta x$.
 
-**Função de ligação:** Como $\mu>0$, a função identidade não é adequada pois o preditor linear pode ser um número real, enquanto $\mu>0$. Assim, uma escolha é $g(\mu) = \log(\mu)\in \mathbb{R}$ e assim obteremos um modelo chamado de {\bf log-linear}: 
+**Função de ligação:** Como $\mu>0$, a função identidade não é adequada pois o preditor linear pode ser um número real, enquanto $\mu>0$. Assim, uma escolha é $g(\mu) = \log(\mu)\in \mathbb{R}$ e assim obteremos um modelo chamado de **log-linear**: 
 \begin{eqnarray*}
 log (\mu) = \alpha + \beta x
 \end{eqnarray*}
@@ -220,5 +229,21 @@ $$\log\left(\dfrac{\mu}{1-\mu}\right)=\alpha + \beta x \;\;\;\;\; \Leftrightarro
 **Poisson**
 
 $$\log(\mu)=\alpha + \beta x \;\;\;\;\; \Leftrightarrow \;\;\;\;\; \mu = e^{\alpha + \beta x}$$
+LACHMANN, Alexander. Correcting under-reported COVID-19 case numbers. MedRxiv, 2020.
 
+DR THEO ECONOMOU,  DR OLIVER STONE. Bayesian Hierarchical Frameworks for Correcting Under-reporting and Delayed Reporting of Count Data.Institute for Data Science and Artificial Intelligence, University of Exeter. Disponível em: <https://www.youtube.com/watch?v=V3F-TFytodg}>
+
+AGRESTI, Alan. Categorical data analysis. John Wiley & Sons, 2003.
+
+Slodkowski, L., da Silva Smolski, F. M., Chassot, T., Reis, D. I., Kaszubowski, E., & Battisti, I. D. E. (2018). PROJETO DE EXTENSÃO EM ANÁLISE ESTATÍSTICA COM O SOFTWARE LIVRE R. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, 10(3)
+
+FARIAS, A. M. L.; KUBRUSLY, J. Q. ; SOUZA, M. A. O.Probabilidade e variáveis aleatórias unidimensionais. 2018.
+
+Coronavírus//Brasil. Disponível em:<https://covid.saude.gov.br/>.
+
+Portal da transparência. Disponível em:<https://transparencia.registrocivil.org.br/inicio>.
+
+Stoner, Oliver, Theo Economou, and Gabriela Drummond Marques da Silva. "A hierarchical framework for correcting under-reporting in count data." Journal of the American Statistical Association (2019).
+
+Nelder, John Ashworth, and Robert WM Wedderburn. "Generalized linear models." Journal of the Royal Statistical Society: Series A (General) 135.3 (1972): 370-384.
 

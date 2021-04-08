@@ -181,15 +181,16 @@ pre code {
 <p><strong>A Conjectura de Collatz</strong></p>
 <p>conjectura de Collatz, conhecida também como <span class="math inline">\(3n + 1\)</span> foi formulada em 1937 pelo matemático alemão Lothar Collatz. Um problema tão famoso no estudo da matemática, algo que se imagina ser verdadeiro, mas que nunca se chegou a uma demonstração satisfatória, tampouco a uma rejeição de tal argumento.</p>
 <p>Esta conjectura pode ser compreendida da seguinte forma: Se <span class="math inline">\(n\)</span> é um número par,devemos dividi-lo por <span class="math inline">\(2\)</span> até que chegue a um número ímpar ou <span class="math inline">\(1\)</span>, se <span class="math inline">\(n\)</span> for um ímpar diferente de <span class="math inline">\(1\)</span>, devemos multiplicá-lo por <span class="math inline">\(3\)</span> e adicionar <span class="math inline">\(1\)</span>, e iniciam-se interações, até chegar ao resultado final que será sempre <span class="math inline">\(1\)</span>.</p>
-<p>Esse processo mostra que sempre termina quando <span class="math inline">\(\frac {3n + 1}{2} = 2k\)</span>, o <span class="math inline">\(n = 2k\)</span> sendo <span class="math inline">\(k\leq 1\)</span>, pois a divisão sucessiva de <span class="math inline">\(k\)</span> vezes por <span class="math inline">\(2\)</span> de <span class="math inline">\(2k\)</span> é <span class="math inline">\(1\)</span>. Formalmente, isto equivale a uma função <span class="math inline">\(f : \mathbb{N} \rightarrow \mathbb{N}\)</span>, tal que:\</p>
-$f(n) = {
-<span class="math display">\[\begin{array}{l}
+<p>Esse processo mostra que sempre termina quando <span class="math inline">\(\frac {3n + 1}{2} = 2k\)</span>, o <span class="math inline">\(n = 2k\)</span> sendo <span class="math inline">\(k\leq 1\)</span>, pois a divisão sucessiva de <span class="math inline">\(k\)</span> vezes por <span class="math inline">\(2\)</span> de <span class="math inline">\(2k\)</span> é <span class="math inline">\(1\)</span>. Formalmente, isto equivale a uma função <span class="math inline">\(f : \mathbb{N} \rightarrow \mathbb{N}\)</span>, tal que:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+f(n) = \left \{\begin{array}{l}
 \frac{n}{2}\textbf{, se $n$ é par};\\
 \\
 3n+1\textbf{, se $n$ é ímpar};\\
 
-\end{array}\]</span>
-<p>.$\ \</p>
+\end{array}\right.
+
+\end{eqnarray*}\]</span></p>
 <p>O interessante fato da análise de <span class="math inline">\(f(n)\)</span> é que ela sempre nos levará a <span class="math inline">\(1\)</span> para qualquer <span class="math inline">\(n\in\mathbb{N}\)</span>, isto é, dentro análise dos números, teremos uma função que sempre nos levará à unidade.</p>
 <p><strong>Testes da Conjectura de Collatz</strong></p>
 <p>Existem soluções diretas com os números pares <span class="math inline">\(n = 2^{k}\)</span> para <span class="math inline">\(k\geq1\)</span>. Os sucessivos períodos de divisão <span class="math inline">\(k\)</span> vezes por <span class="math inline">\(2\)</span>, tem um resultado final igual a <span class="math inline">\(1\)</span>.</p>
@@ -324,7 +325,16 @@ x+y=12
 <p>Assim: <span class="math display">\[4[(n-1)! + 1] + n \equiv 0\pmod {n(n + 2)}.\]</span></p>
 <p>Portanto, a demonstração está concluída.</p>
 <p>No entanto, a conjectura dos Primos Gêmeos continua sendo um dos pertinentes mistérios da matemática, O problema original, com <span class="math inline">\(n = 2\)</span>, continua sem solução. Despertando dessa forma, mais interesse no campo da matemática por uma solução desse importante resultado.</p>
-<p><strong><em>Observação:</em></strong> Este trabalho contou com a colaboração de Júlia Martins</p>
+<p><strong><em>Referências:</em></strong></p>
+<p>SOUZA, J. B. Conjecturas em Teoria dos Números e suas histórias. Universidade Federal da Paraíba-UFPB. Maio de 2019.</p>
+<p>FERREIRA, J.H.P. Solución a La Conjectura de Collatz. Centro de Investigaciones Científicas, Escuela Naval de Cadetes “Almirante Padilla”, Isla Manzillo, Cartagena de Indias, Colombia.</p>
+<p>GONZÁLE, J.A.Z.Estudio de La Conjectura de Collatz. Versión 2.4.</p>
+<p>Blog Brasil Acadêmico. Disponível em: <a href="http://blog.brasilacademico.com/2019/12/a-perigosa-conjectura-de-collatz.html" class="uri">http://blog.brasilacademico.com/2019/12/a-perigosa-conjectura-de-collatz.html</a>. Publicado em Dezembro de 2019.</p>
+<p>TAMAOKI, A. M. Primos Gêmeos. Universidade Estadual de Campinas - UNICAMP. Outubro de 2017.</p>
+<p>TORRES, F.; RAMALHO, M. C.; MARCELINO, P.C. Primos Gêmeos: A Teoria Aritmética dos Números. IMEC - UNICAMP</p>
+<p>VIANA, M. Primos Gêmeos constituem um dos mistérios mais intrigantes da Aritmética. Folha de São Paulo, Março de 2018. Disponível em <a href="https://www1.folha.uol.com.br/colunas/marceloviana/2018/03/primosgemeos-constituem-um-dos-misterios-mais-intrigantes-da-aritmetica.shtml" class="uri">https://www1.folha.uol.com.br/colunas/marceloviana/2018/03/primosgemeos-constituem-um-dos-misterios-mais-intrigantes-da-aritmetica.shtml</a>.</p>
+<p>SOUZA, J. B. Conjecturas em Teoria dos Números e suas histórias. Universidade Federal da Paraíba-UFPB. Maio de 2019.</p>
+<p><strong><em>Observação:</em></strong> Este trabalho contou com a colaboração de Júlia Martins.</p>
 </div>
 </div>
 

@@ -101,4 +101,13 @@ Concluímos também que, tirando a exceção do teorema, basta analisarmos os gr
 
 Ao passar do tempo a Teoria de Grafos, a partir de pesquisas e descobertas, foi ganhando corpo e dentre ela foram surgindo vários outros ramos, como os diferentes tipos de grafos, por exemplo os conexos, bipartidos, planares, eulerianos, hamiltonianos, de linha e vários outros. Nesse trabalho, falaremos um pouco sobre o grafo de linha, pouco estudado comparado com outros, mas não menos importante.
 
-***Observação*** Este trabalho contou com a colaboração de João Goller.
+***Referências:***
+
+<https://www.ic.unicamp.br/~meidanis/courses/mo405/2002s2/atas/2002-10-28.html>
+<https://en.wikipedia.org/wiki/Linegraph#CITEREFWhitney1932>
+<https://www.mathsisfun.com/data/line-graphs.html>
+<http://professor.ufabc.edu.br/~jair.donadelli/disciplinas-ufpr/ci065/>
+<https://mail.google.com/mail/u/0/#inbox/FMfcgxwJWrZSkHVfHzCfJzXJpJFgLTdM?projector=1&messagePartId=0.1>
+
+
+***Observação:*** Este trabalho contou com a colaboração de João Gollner.

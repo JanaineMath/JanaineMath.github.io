@@ -25,15 +25,17 @@ como $3n + 1$ foi formulada em 1937 pelo matemático alemão Lothar Collatz. Um 
 
 Esta conjectura pode ser compreendida da seguinte forma: Se $n$ é um número par,devemos dividi-lo por $2$ até que chegue a um número ímpar ou $1$, se $n$ for um ímpar diferente de $1$, devemos multiplicá-lo por $3$ e adicionar $1$, e iniciam-se interações, até chegar ao resultado final que será sempre $1$.
 
-Esse processo mostra que sempre termina quando $\frac {3n + 1}{2} = 2k$, o $n = 2k$ sendo $k\leq 1$, pois a divisão sucessiva de $k$ vezes por $2$ de $2k$ é $1$. Formalmente, isto equivale a uma função $f : \mathbb{N} \rightarrow \mathbb{N}$, tal que:\\
+Esse processo mostra que sempre termina quando $\frac {3n + 1}{2} = 2k$, o $n = 2k$ sendo $k\leq 1$, pois a divisão sucessiva de $k$ vezes por $2$ de $2k$ é $1$. Formalmente, isto equivale a uma função $f : \mathbb{N} \rightarrow \mathbb{N}$, tal que:
 
-$f(n) = \left \{\begin{array}{l}
+\begin{eqnarray*}
+f(n) = \left \{\begin{array}{l}
 \frac{n}{2}\textbf{, se $n$ é par};\\
 \\
 3n+1\textbf{, se $n$ é ímpar};\\
 
-\end{array} \right.$\\
-\\
+\end{array}\right.
+
+\end{eqnarray*}
 
 O interessante fato da análise de $f(n)$ é que ela sempre nos levará a $1$ para qualquer $n\in\mathbb{N}$, isto é, dentro análise dos números, teremos uma função que sempre nos levará à unidade.
 
@@ -271,5 +273,27 @@ Portanto, a demonstração está concluída.
 
 No entanto, a conjectura dos Primos Gêmeos continua sendo um dos pertinentes mistérios da matemática, O problema original, com $n = 2$, continua sem solução. Despertando dessa forma, mais interesse no campo da matemática por uma solução desse importante resultado.
 
+
+***Referências:***
+
+SOUZA, J. B. Conjecturas em Teoria dos Números e suas histórias. Universidade Federal da Paraíba-UFPB. Maio de 2019.
+
+FERREIRA, J.H.P. Solución a La Conjectura de Collatz. Centro de Investigaciones Científicas, Escuela Naval de Cadetes "Almirante Padilla", Isla Manzillo, Cartagena de Indias, Colombia.
+
+GONZÁLE\, J.A.Z.Estudio de La Conjectura de Collatz. Versión 2.4.
+
+Blog Brasil Acadêmico. Disponível em:
+http://blog.brasilacademico.com/2019/12/a-perigosa-conjectura-de-collatz.html. Publicado em Dezembro de 2019.
+
+TAMAOKI, A. M. Primos Gêmeos. Universidade Estadual de Campinas - UNICAMP. Outubro de 2017.
  
-***Observação:*** Este trabalho contou com a colaboração de Júlia Martins
+TORRES, F.; RAMALHO, M. C.; MARCELINO, P.C. Primos Gêmeos: A Teoria Aritmética dos Números. IMEC - UNICAMP
+ 
+VIANA, M. Primos Gêmeos constituem um dos mistérios mais intrigantes da Aritmética. Folha de São Paulo, Março de 2018. Disponível em <https://www1.folha.uol.com.br/colunas/marceloviana/2018/03/primosgemeos-constituem-um-dos-misterios-mais-intrigantes-da-aritmetica.shtml>.
+
+SOUZA, J. B. Conjecturas em Teoria dos Números e suas histórias. Universidade Federal da Paraíba-UFPB. Maio de 2019.
+
+
+
+ 
+***Observação:*** Este trabalho contou com a colaboração de Júlia Martins.
