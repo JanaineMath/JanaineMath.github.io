@@ -122,9 +122,9 @@ Alguns outros exemplos são:
 
 #### Modelo Hierárquico de Poisson-Binomial
 
-- Como citado nos exemplos anteriores, podemos supor que há um número {\bf verdadeiro} de casos que ocorreram em um município, digamos $Y$, mas que apenas $Z$ casos são notificados às autoridades. Uma restrição que surge em $Z$ é $$Z=0, 1, ..., Y \;\;\;\text{ em que }\;\;\; Y=0, 1, 2, 3, ...$$
+- Como citado nos exemplos anteriores, podemos supor que há um número verdadeiro de casos que ocorreram em um município, digamos $Y$, mas que apenas $Z$ casos são notificados às autoridades. Uma restrição que surge em $Z$ é $$Z=0, 1, ..., Y \;\;\;\text{ em que }\;\;\; Y=0, 1, 2, 3, ...$$
 
-- Dessa forma, consideramos que $Y\sim Poi(\lambda)$ e que representa o número verdadeiro de casos e supondo que a {\bf probabilidade de notificação} é $p$ em todos os casos, então o número de casos notificados, dado o número verdadeiro, é $Z|y \sim Bin(y, p)$, ou seja, obtemos o {\bf modelo hierárquico Poisson-Binomial}:
+- Dessa forma, consideramos que $Y\sim Poi(\lambda)$ e que representa o número verdadeiro de casos e supondo que a  probabilidade de notificação é $p$ em todos os casos, então o número de casos notificados, dado o número verdadeiro, é $Z|y \sim Bin(y, p)$, ou seja, obtemos o modelo hierárquico Poisson-Binomial:
 
 \begin{eqnarray*}
 Y &\sim& Poisson(\lambda)\\
@@ -144,7 +144,7 @@ Z|Y=y &\sim& Binomial(y, p)
 
 #### Modelos Lineares Generalizados 
 
-- Como comentado, as ferramentas para relacionar um conjunto de características chamado de {\bf variáveis explicativas} (VE) com uma variável de interesse, chamada de {\bf variável resposta} (VR) são os {\bf modelos de regressão}. 
+- Como comentado, as ferramentas para relacionar um conjunto de características chamado de **variáveis explicativas** (VE) com uma variável de interesse, chamada de **variável resposta** (VR) são os **modelos de regressão**. 
    - Uma classe de modelos que englobam as distribuições Binomial e de Poisson são os {\bf Modelos Lineares Generalizados}. Foram propostos por Nelder e Wedderburn (1972).
 - Os MLGs são caracterizados por:
  - componente aleatório

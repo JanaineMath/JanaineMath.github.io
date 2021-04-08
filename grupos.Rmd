@@ -32,12 +32,12 @@ A importância dos estudos de grupos simples em teoria dos grupos se dá no sent
   - Todo elemento é inversível.
 
 
-- Se a operação $*$ for comutativa, dizemos que $G$ é grupo abeliano. 
+- Se a operação $.$ for comutativa, dizemos que $G$ é grupo abeliano. 
 
 - Um subconjunto não vazio $H$ de um grupo $G$  é dito **subgrupo** de $G$ (denotaremos como $H \leq G$) se $H$ é grupo com a operação de $G$.
 - Se o grupo $G$ é tal que existe $a\in G$ e $G=\langle a\rangle$, dizemos que $G$ é **grupo cíclico** gerado por $a$.
 - Seja $G$ um grupo. Um subgrupo $H$ de $G$ é dito **normal** se $aH = Ha  ~\forall~a\in G$, denotaremos por $H\lhd G$.
-- Um grupo $G$ é dito \textbf{simples} se não possui subgrupo normal não trivial.
+- Um grupo $G$ é dito **simples** se não possui subgrupo normal não trivial.
 
 #### Exemplos
 - $(\mathbb{Z},+)$ é subgrupo de $(\mathbb{Q},+)$.
