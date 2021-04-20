@@ -9,6 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ### Introdução
+
+
+
 O estudo de grupos simples iniciou-se no século XIX com Évariste Galois, que também originou historicamente o conceito de grupo. Seus estudos tiveram início ainda na adolescência quando passou a arquitetar uma teoria com aplicações sobretudo à teoria das equações algébricas que o levou a concluir um importante resultado: a impossibilidade de resolução por meio
 de radicais de equações gerais de grau maior ou igual a cinco.
 
@@ -149,3 +152,6 @@ Portanto, existe grupo simples de ordem 60.
 Arnaldo Garcia; Lequain, Y. . Elementos de Algebra. Rio de Janeiro: Projeto Euclides-IMPA, 2002. 327p.
 
 SANTOS, M. L. O..Sobre grupos simples finitos. Belo Horizonte: UFMG 2015.
+
+*Imagem do item da página inicial disponível em:*
+https://www.flickr.com/photos/suetortoise/3900404854/

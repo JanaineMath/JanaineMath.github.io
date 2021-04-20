@@ -32,3 +32,6 @@ Neste trabalho temos como objetivos:
 - Estuda como funciona a classificação de grupos simples;
 - Aplicar os teoremas e resultados estudados para a classificação de grupos simples; 
 - Compreender a importância de grupos simples finitos na teoria de grupos.  
+
+*Imagem utilizada no item da página inicial disponível em:*
+https://cdn.pixabay.com/photo/2017/06/15/11/51/learn-2405206_960_720.jpg
